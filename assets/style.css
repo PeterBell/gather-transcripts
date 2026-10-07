@@ -1,3 +1,14 @@
+/* Brand type (theme "light"): Fira Sans and Fira Mono, self-hosted under the SIL OFL (fonts/OFL.txt).
+   Lazy by design: a face downloads only when text on the page uses it, so theme "auto" never fetches these. */
+@font-face { font-family: "Fira Sans"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts/fira-sans-400-latin-ext.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Fira Sans"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts/fira-sans-400-latin.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Fira Sans"; font-style: italic; font-weight: 400; font-display: swap; src: url("fonts/fira-sans-400-italic-latin-ext.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Fira Sans"; font-style: italic; font-weight: 400; font-display: swap; src: url("fonts/fira-sans-400-italic-latin.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Fira Sans"; font-style: normal; font-weight: 700; font-display: swap; src: url("fonts/fira-sans-700-latin-ext.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Fira Sans"; font-style: normal; font-weight: 700; font-display: swap; src: url("fonts/fira-sans-700-latin.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Fira Mono"; font-style: normal; font-weight: 500; font-display: swap; src: url("fonts/fira-mono-500-latin-ext.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Fira Mono"; font-style: normal; font-weight: 500; font-display: swap; src: url("fonts/fira-mono-500-latin.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
 :root {
   color-scheme: light dark;
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
@@ -12,6 +23,9 @@
   --leading-body: 1.65;
   --leading-small: 1.45;
   --tracking-title: -0.015em;
+  --font-display: var(--font-sans);   /* headings, stamps, site name */
+  --weight-head: 600;
+  --tracking-head: 0;
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
@@ -50,7 +64,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="gather"]):not([data-theme="light"]) {
     --bg: #141413;
     --surface: #1E1E1C;
     --ink-1: #ECEBE6;
@@ -61,6 +75,34 @@
     --accent-wash: #1B2537;
     --search-hit: #5C4B12;
   }
+}
+
+/* Brand theme: site.theme = "light". Gather light palette and type, light only, no dark scheme.
+   Contrast (on bg / surface / wash): ink-1 14.7 / 13.7 / 12.7; ink-2 7.6 / 7.1 / 6.5; accent 5.4 / 5.0 / 4.6.
+   Gather orange #ff6600 is 2.9:1 on white, too light for text or a focus ring, so --accent is the same
+   hue (oklch 43.5) taken down to AA. The pure orange lives in the logo. ink-3 is non-text only and needs
+   3:1 because it draws the search field border: Gather soft #9ca3af is 2.5:1, so ink-3 is #6b7280 (4.8:1). */
+:root[data-theme="light"] {
+  color-scheme: light;             /* neutral light only: the auto tokens without the dark scheme */
+}
+
+:root[data-theme="gather"] {
+  color-scheme: light;
+  --font-sans: "Fira Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-display: "Fira Mono", ui-monospace, Menlo, Consolas, "Courier New", monospace;
+  --weight-head: 500;
+  --tracking-title: -0.02em;
+  --tracking-head: -0.02em;
+  --text-title: clamp(1.5rem, 1.2rem + 1.2vw, 1.75rem);   /* Mono runs wide: two lines for a typical title at desktop */
+  --bg: #FFFFFF;
+  --surface: #F7F7F5;
+  --ink-1: #1F2937;
+  --ink-2: #4B5563;
+  --ink-3: #6B7280;
+  --rule: #E0DDD6;
+  --accent: #B74700;
+  --accent-wash: #F0EEEA;
+  --search-hit: #FBE7A1;
 }
 
 * { box-sizing: border-box; }
@@ -120,16 +162,43 @@ a:hover { text-decoration-color: var(--accent); }
 .skip-link:focus { transform: translateY(0); }
 
 .site-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
   max-width: calc(77rem + 2 * var(--page-pad));
   margin: 0 auto;
   padding: var(--space-5) var(--page-pad) var(--space-6) calc(var(--page-pad) + var(--hang));
   font-size: var(--text-small);
 }
 
-.site-bar a {
+.site-bar.has-brand {
+  padding-top: var(--space-4);
+  padding-bottom: var(--space-5);
+  font-size: 1rem;   /* the site name holds its own beside the mark */
+}
+
+.site-name {
+  min-width: 0;
   color: var(--ink-1);
-  font-weight: 600;
+  font-family: var(--font-display);
+  font-weight: var(--weight-head);
+  letter-spacing: var(--tracking-head);
   text-decoration: none;
+}
+
+/* Host brand, top right. The lockup is sized by height so any brand's mark sets one bar height:
+   42px tall puts the 2476x501 Gather lockup at 207px wide (logo.md floor: 200px). Clear space
+   (a quarter of the height, 10.5px) is held by the bar padding and the 1rem gap. Never filtered or recolored. */
+.brand {
+  display: block;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.brand img {
+  display: block;
+  width: auto;
+  height: 42px;
 }
 
 .page-shell {
@@ -153,8 +222,9 @@ h1 {
   color: var(--ink-1);
   font-size: var(--text-title);
   line-height: var(--leading-title);
+  font-family: var(--font-display);
   letter-spacing: var(--tracking-title);
-  font-weight: 600;
+  font-weight: var(--weight-head);
   text-wrap: balance;
 }
 
@@ -298,8 +368,11 @@ h1 {
 }
 
 .chapters-panel ol {
-  margin: 0;
-  padding: 0;
+  /* The list scrolls, so it clips anything outside its box: widen the box by the rows' outdent,
+     or the active bar and the hover wash's left padding are cut off. */
+  margin: 0 0 0 calc(-2px - var(--space-3));
+  padding: 0 0 0 calc(2px + var(--space-3));
+  list-style: none;
   max-height: 45dvh;
   overflow: auto;
   min-height: 0;
@@ -347,16 +420,20 @@ h1 {
 h2 {
   margin: 0 0 var(--space-4);
   color: var(--ink-2);
+  font-family: var(--font-display);
   font-size: var(--text-small);
   line-height: 1.4;
-  font-weight: 600;
+  font-weight: var(--weight-head);
+  letter-spacing: var(--tracking-head);
 }
 
 h3 {
   margin: var(--space-5) 0 var(--space-2);
+  font-family: var(--font-display);
   font-size: var(--text-h3);
   line-height: 1.35;
-  font-weight: 600;
+  font-weight: var(--weight-head);
+  letter-spacing: var(--tracking-head);
 }
 
 .summary-html p,
@@ -439,6 +516,11 @@ h3 {
   line-height: 1.5;
 }
 
+.search-wrap input::placeholder {
+  color: var(--ink-2);
+  opacity: 1;
+}
+
 #search-status { margin: 0; }
 
 .transcript-section {
@@ -474,6 +556,7 @@ h3 {
 .stamp {
   min-height: 24px;
   color: var(--ink-2);
+  font-family: var(--font-display);
   font-size: var(--text-stamp);
   font-weight: 500;
   font-variant-numeric: tabular-nums;
@@ -525,6 +608,13 @@ h3 {
   margin: 0 auto;
   padding: var(--space-7) var(--page-pad);
 }
+
+.site-bar.index-bar {
+  max-width: 48rem;
+  padding-left: var(--page-pad);
+}
+
+.index-bar + .index-shell { padding-top: 0; }
 
 .not-found {
   max-width: calc(77rem + 2 * var(--page-pad));
@@ -625,6 +715,9 @@ h3 {
 
   .page-shell { gap: var(--space-6); }
 
+  /* Phones: the 207px lockup needs the room. At 14px the site name leaves the full 16px gap down to 360px. */
+  .site-bar.has-brand { font-size: var(--text-small); }
+
   .player-card,
   .summary-card {
     margin-left: -1.25rem;
@@ -652,8 +745,15 @@ h3 {
   }
 }
 
+/* Under 360px the lockup cannot keep 200px and its clear space beside the site name:
+   the template swaps in the square icon (site.favicon) and it sits at 32px (logo.md floor: 24px). */
+@media (max-width: 22.49rem) {
+  .brand.has-icon img { height: 32px; }
+}
+
 @media print {
-  :root {
+  :root,
+  :root[data-theme] {
     color-scheme: light;
     --bg: #FFFFFF;
     --ink-1: #000000;
