@@ -1,0 +1,2362 @@
+{
+  "meta": {
+    "schema": "youtube-transcript-share/meta/v1",
+    "video_id": "VqaexziMnRw",
+    "url": "https://www.youtube.com/watch?v=VqaexziMnRw",
+    "title": "Scaling AI in Engineering with Peter Bell | Ep. 7 | Confluent Developer Podcast",
+    "channel": {
+      "name": "Confluent Developer",
+      "id": "UCmTK4CrCaDXpuZ-Evl5-b5Q",
+      "url": "https://www.youtube.com/channel/UCmTK4CrCaDXpuZ-Evl5-b5Q"
+    },
+    "published_at": "2025-11-03",
+    "duration_seconds": 1636,
+    "description": "Listen: https://confluent.buzzsprout.com | Today, Adi Polak talks to her guest, Peter Bell (gather.dev), about his career in software engineering leadership, CTO community building, and AI-driven development. Peter’s first job: electronics lab technician at their school (alongside shifts at Tesco). His challenge/theme: working at scale with AI adoption and change management.\n\nCheck out gather.dev: https://www.gather.dev/\n🎧 Subscribe to Confluent Developer wherever you listen to podcasts: https://confluent.buzzsprout.com\n▶️ Subscribe on YouTube, and hit the 🔔 to catch new episodes: https://youtube.com/@ConfluentDeveloper?sub_confirmation=1\n👍 If you enjoyed this, please like it and leave us a comment\n🎧 Confluent also has a podcast for tech leaders: \"Life Is But A Stream\" hosted by our friend, Joseph Morais: https://www.confluent.io/life-is-but-a-stream-show\n\nCREDITS\nHosted by Tim Berglund, Adi Polak and Viktor Gamov\nProduced and Edited by Noelle Gallagher, Peter Furia and Nurie Mohamed\nMusic by Coastal Kites\nArtwork by Phil Vo\n\nABOUT THE PODCAST \nHi, we’re Tim Berglund, Adi Polak, and Viktor Gamov and we’re excited to bring you the Confluent Developer podcast (formerly “Streaming Audio.”) Our hand-crafted weekly episodes feature in-depth interviews with our community of software developers (actual human beings - not AI) talking about some of the most interesting challenges they’ve faced in their careers. We aim to explore the conditions that gave rise to each person’s technical hurdles, as well as how their experiences transformed their understanding and approach to building systems. \n\nWhether you’re a seasoned open source data streaming engineer, or just someone who’s interested in learning more about Apache Kafka®,  Apache Flink® and real-time data, we hope you’ll appreciate the stories, the discussion, and our effort to bring you a high-quality show worth your time.\n\nABOUT CONFLUENT DEVELOPER\nConfluent Developer provides comprehensive resources for developers looking to learn about Apache Kafka®, Apache Flink®, Confluent Cloud, Confluent Platform, and any other technology related to the broader Data Streaming Platform. Content on Confluent Developer includes courses, getting started guides, topical deep-dives, patterns, tutorials, and listings of community events. Learn more at https://developer.confluent.io. \n\n#confluentdeveloper #podcast #confluent",
+    "thumbnail_url": "https://i.ytimg.com/vi/VqaexziMnRw/maxresdefault.jpg",
+    "language": "en-US",
+    "tags": [
+      "confluent",
+      "apache kafka",
+      "streams",
+      "logs",
+      "hadoop",
+      "free",
+      "open source",
+      "streaming",
+      "platform",
+      "applications",
+      "apps",
+      "real-time",
+      "processing",
+      "data",
+      "Multi-Datacenter",
+      "monitoring",
+      "developers",
+      "operations",
+      "ops",
+      "java",
+      ".net",
+      "messaging queue",
+      "distributed",
+      "commit",
+      "fault-tolerant",
+      "publish",
+      "subscribe",
+      "pipelines",
+      "Flink",
+      "data streaming",
+      "data in motion",
+      "warpstream"
+    ],
+    "captured_at": "2026-10-07T18:48:22Z",
+    "shared": true,
+    "shared_at": "2026-10-07T18:48:49Z",
+    "transcript_source": {
+      "kind": "captions-manual",
+      "language": "en",
+      "cleaned_by": null
+    },
+    "tool_version": "0.1.0"
+  },
+  "transcript": {
+    "schema": "youtube-transcript-share/transcript/v1",
+    "video_id": "VqaexziMnRw",
+    "source": {
+      "kind": "captions-manual",
+      "language": "en",
+      "cleaned_by": null
+    },
+    "segments": [
+      {
+        "start": 0.001,
+        "end": 5.84,
+        "text": "Today, we're diving into the art and science of building software that lasts."
+      },
+      {
+        "start": 6.16,
+        "end": 8.4,
+        "text": "This is Confluent Developer."
+      },
+      {
+        "start": 8.4,
+        "end": 10.844,
+        "text": "Wait a minute, you got 400 people working for you,"
+      },
+      {
+        "start": 10.844,
+        "end": 14.559,
+        "text": "and they know that their job's either going to be eliminated or transformed."
+      },
+      {
+        "start": 14.88,
+        "end": 15.52,
+        "text": "What do you say?"
+      },
+      {
+        "start": 15.68,
+        "end": 19.2,
+        "text": "I'm going to argue that it's not the LLM's fault."
+      },
+      {
+        "start": 19.439,
+        "end": 22.8,
+        "text": "It's not that they hallucinate, it's just that we're simply insufficiently."
+      },
+      {
+        "start": 23.32,
+        "end": 25.0,
+        "text": "Precise in our requirements."
+      },
+      {
+        "start": 25.32,
+        "end": 26.76,
+        "text": "You know, so that was the problem."
+      },
+      {
+        "start": 27.32,
+        "end": 29.64,
+        "text": "I did a great job of building out the technology."
+      },
+      {
+        "start": 29.72,
+        "end": 34.12,
+        "text": "If only I'd got more customers, I would probably be coming to you live from my yacht."
+      },
+      {
+        "start": 34.12,
+        "end": 35.239,
+        "text": "Hello there, everyone."
+      },
+      {
+        "start": 35.32,
+        "end": 39.872,
+        "text": "I'm Adi Polak, and welcome to Confluent Developer, where we explore"
+      },
+      {
+        "start": 39.872,
+        "end": 45.051,
+        "text": "the fascinating journeys of software developers tackling complex problems."
+      },
+      {
+        "start": 45.051,
+        "end": 52.443,
+        "text": "In this episode, I'm interviewing Peter Bell, a veteran engineer, founder, educator and community builder"
+      },
+      {
+        "start": 52.443,
+        "end": 57.3,
+        "text": "with over three decades of experience shaping the future of software."
+      },
+      {
+        "start": 57.54,
+        "end": 64.391,
+        "text": "From his early days soldering circuits boards and school labs to building CTO communities"
+      },
+      {
+        "start": 64.391,
+        "end": 69.383,
+        "text": "and writing a new book on scaling AI and engineering for O'Reilly."
+      },
+      {
+        "start": 69.383,
+        "end": 77.362,
+        "text": "Peter shares a story of vision evolution and the relentless pursuit of clarity in how we build systems."
+      },
+      {
+        "start": 77.362,
+        "end": 84.445,
+        "text": "His journey spans everything from pioneering early DSL driven web platforms in the nineties"
+      },
+      {
+        "start": 84.445,
+        "end": 93.94,
+        "text": "to exploring the future of where code itself becomes a FERMO. Replaced by precise specifications and intelligent defaults."
+      },
+      {
+        "start": 94.26,
+        "end": 95.78,
+        "text": "Let's get into it."
+      },
+      {
+        "start": 102.5,
+        "end": 103.22,
+        "text": "Hello, everybody."
+      },
+      {
+        "start": 103.82,
+        "end": 105.58,
+        "text": "Welcome back to Confluent Developer."
+      },
+      {
+        "start": 105.82,
+        "end": 108.86,
+        "text": "I'm super excited to have this special guest today with me."
+      },
+      {
+        "start": 109.02,
+        "end": 114.06,
+        "text": "His name is Peter Bell, a veteran engineer, leader, founder, educator, community builder."
+      },
+      {
+        "start": 114.06,
+        "end": 119.751,
+        "text": "with over thirty years of experience planning software engineering, developer advocacy,"
+      },
+      {
+        "start": 119.751,
+        "end": 126.751,
+        "text": "entrepreneurship, executive leadership, and a deep, deep understanding in systems and how to build them for success."
+      },
+      {
+        "start": 126.751,
+        "end": 128.539,
+        "text": "Peter, welcome."
+      },
+      {
+        "start": 129.1,
+        "end": 129.6,
+        "text": "Wow."
+      },
+      {
+        "start": 129.74,
+        "end": 133.1,
+        "text": "Well, thanks for making it really easy for me to live up to the billing."
+      },
+      {
+        "start": 134.06,
+        "end": 136.38,
+        "text": "Now he's got to be an expert at everything."
+      },
+      {
+        "start": 136.459,
+        "end": 138.62,
+        "text": "This better be a good episode."
+      },
+      {
+        "start": 139.36,
+        "end": 146.56,
+        "text": "I mean, you are one of top leaders in our industry and super fortunate to have you on the show."
+      },
+      {
+        "start": 146.88,
+        "end": 152.4,
+        "text": "Maybe you want to say a couple of words about yourself and some of the new cool stuff that you work on right now."
+      },
+      {
+        "start": 152.82,
+        "end": 153.22,
+        "text": "Sure."
+      },
+      {
+        "start": 153.22,
+        "end": 155.3,
+        "text": "So right now I'm super excited about two things."
+      },
+      {
+        "start": 155.54,
+        "end": 159.62,
+        "text": "The first is I've just founded, I've been threatening to do this for 15 years."
+      },
+      {
+        "start": 159.7,
+        "end": 162.98,
+        "text": "I've been building CTO communities, monthly meetups, conferences."
+      },
+      {
+        "start": 163.3,
+        "end": 165.42,
+        "text": "Finally founded gather.dev."
+      },
+      {
+        "start": 165.58,
+        "end": 171.26,
+        "text": "And the goal is to create an invite-only brain trust for CTOs and other engineering leaders to connect"
+      },
+      {
+        "start": 171.26,
+        "end": 175.66,
+        "text": "with their very closest peers, whether that's CTOs at scale running large orgs."
+      },
+      {
+        "start": 176.08,
+        "end": 178.96,
+        "text": "venture back startups, CTOs or heads of AI."
+      },
+      {
+        "start": 179.2,
+        "end": 184.96,
+        "text": "And the goal is to have in person monthly meetups in New York City, online communities and to scale from there."
+      },
+      {
+        "start": 185.06,
+        "end": 189.021,
+        "text": "really so that you get people to understand exactly what you're dealing with"
+      },
+      {
+        "start": 189.021,
+        "end": 194.18,
+        "text": "and you can very quickly vet ideas or challenges that you're facing, and it's free and invite only."
+      },
+      {
+        "start": 194.6,
+        "end": 198.44,
+        "text": "And then the one other fun thing is, I am so excited."
+      },
+      {
+        "start": 198.76,
+        "end": 204.15,
+        "text": "The O'Reilly team, I get to host their CTO hour once a quarter, and they've asked me to"
+      },
+      {
+        "start": 204.15,
+        "end": 207.0,
+        "text": "write a book called Scaling AI in Engineering."
+      },
+      {
+        "start": 207.94,
+        "end": 211.3,
+        "text": "A leader's guide to driving alignment, adoption, and impact."
+      },
+      {
+        "start": 211.54,
+        "end": 213.54,
+        "text": "So it's all the non-technical stuff."
+      },
+      {
+        "start": 213.7,
+        "end": 220.66,
+        "text": "It's not routers or how you manage your inference workloads or how you deal with any of that."
+      },
+      {
+        "start": 220.819,
+        "end": 222.5,
+        "text": "It's like, wait a minute, you've got 400 people."
+      },
+      {
+        "start": 222.86,
+        "end": 223.5,
+        "text": "Working for you."
+      },
+      {
+        "start": 223.739,
+        "end": 228.3,
+        "text": "And they know that their job's either going to be eliminated or transformed."
+      },
+      {
+        "start": 228.86,
+        "end": 229.819,
+        "text": "What do you say?"
+      },
+      {
+        "start": 230.14,
+        "end": 234.86,
+        "text": "Then you've got a CEO who's like, so why aren't we doing 10 times the output with a 10th of the staff?"
+      },
+      {
+        "start": 234.94,
+        "end": 236.459,
+        "text": "Because I saw the case study."
+      },
+      {
+        "start": 236.66,
+        "end": 238.34,
+        "text": "And so, you've got to manage their expectations."
+      },
+      {
+        "start": 238.5,
+        "end": 242.74,
+        "text": "And how do you manage this what is fundamentally a change management problem?"
+      },
+      {
+        "start": 243.06,
+        "end": 249.385,
+        "text": "And I've been interviewing a whole bunch of CTOs, and so that is it is going to be a fascinating book,"
+      },
+      {
+        "start": 249.385,
+        "end": 254.78,
+        "text": "and I'm also going to have a companion website, which there'll be a link on the gather."
+      },
+      {
+        "start": 254.94,
+        "end": 257.26,
+        "text": "dev website if anyone wants to find it."
+      },
+      {
+        "start": 257.459,
+        "end": 258.259,
+        "text": "It's amazing."
+      },
+      {
+        "start": 258.979,
+        "end": 260.1,
+        "text": "It's definitely necessary."
+      },
+      {
+        "start": 260.18,
+        "end": 264.94,
+        "text": "It's something that I always hear from different engineering leaders in this space."
+      },
+      {
+        "start": 264.94,
+        "end": 269.98,
+        "text": "And also the fact that as an engineers, as leaders, we all need to kind of skill up, right?"
+      },
+      {
+        "start": 270.3,
+        "end": 279.1,
+        "text": "This is the time to learn new things, embrace change and see how we can develop as human beings in this new space."
+      },
+      {
+        "start": 279.34,
+        "end": 285.18,
+        "text": "of AI that we can continue having a a good successful, hopefully successful career."
+      },
+      {
+        "start": 285.82,
+        "end": 287.5,
+        "text": "So super curious."
+      },
+      {
+        "start": 287.84,
+        "end": 289.28,
+        "text": "Yeah, super curious about your book."
+      },
+      {
+        "start": 289.36,
+        "end": 291.76,
+        "text": "I'm definitely going to be purchasing a copy."
+      },
+      {
+        "start": 292.72,
+        "end": 294.0,
+        "text": "Do you have a date?"
+      },
+      {
+        "start": 294.16,
+        "end": 297.127,
+        "text": "I know this is a little bit stressful for book authors"
+      },
+      {
+        "start": 297.127,
+        "end": 302.051,
+        "text": "Oh no, it's the stressful was the fact that the first two chapters were due this morning,"
+      },
+      {
+        "start": 302.051,
+        "end": 305.26,
+        "text": "but I'm like really close and they're being very flexible."
+      },
+      {
+        "start": 305.42,
+        "end": 307.58,
+        "text": "So by tomorrow, we'll have two chapters in."
+      },
+      {
+        "start": 308.38,
+        "end": 312.3,
+        "text": "This will launch early next year, but I think what's going to be just as interesting."
+      },
+      {
+        "start": 312.98,
+        "end": 316.1,
+        "text": "Is there is going to be a website."
+      },
+      {
+        "start": 316.26,
+        "end": 318.66,
+        "text": "You've got to give me a couple of days, but if you go to gather."
+      },
+      {
+        "start": 318.82,
+        "end": 321.54,
+        "text": "dev, you'll see a link called books that will get you there."
+      },
+      {
+        "start": 321.66,
+        "end": 327.225,
+        "text": "And we're going to be dropping, starting end of October, we're going to drop weekly interviews"
+      },
+      {
+        "start": 327.225,
+        "end": 330.54,
+        "text": "with thought leaders and with CTOs from large companies."
+      },
+      {
+        "start": 330.78,
+        "end": 336.166,
+        "text": "So there will be ongoing insights, advice, and information long before the book's available,"
+      },
+      {
+        "start": 336.166,
+        "end": 341.2,
+        "text": "and then it'll also be accessible on early release a little bit before it's published."
+      },
+      {
+        "start": 341.36,
+        "end": 345.04,
+        "text": "But the actual publication date should be early Q2 of next year."
+      },
+      {
+        "start": 345.12,
+        "end": 345.759,
+        "text": "Fantastic."
+      },
+      {
+        "start": 345.919,
+        "end": 352.159,
+        "text": "Okay, everybody, stay tuned for the website and the opportunity to learn from some of the greatest minds in the industry."
+      },
+      {
+        "start": 353.84,
+        "end": 354.88,
+        "text": "It's cool, it's great."
+      },
+      {
+        "start": 354.96,
+        "end": 359.36,
+        "text": "What I love about my job is basically I just interview people way smarter than me."
+      },
+      {
+        "start": 359.68,
+        "end": 362.24,
+        "text": "And then people are like, wow, that was a really smart conversation."
+      },
+      {
+        "start": 362.4,
+        "end": 363.2,
+        "text": "And Peter was there."
+      },
+      {
+        "start": 363.44,
+        "end": 364.56,
+        "text": "I guess he must be smart."
+      },
+      {
+        "start": 364.8,
+        "end": 367.12,
+        "text": "It's the awesome life hack."
+      },
+      {
+        "start": 367.2,
+        "end": 370.0,
+        "text": "If you're not really that smart, just interview people smarter than yourself."
+      },
+      {
+        "start": 370.08,
+        "end": 371.12,
+        "text": "It works perfectly."
+      },
+      {
+        "start": 371.44,
+        "end": 373.12,
+        "text": "That's the best advice."
+      },
+      {
+        "start": 373.16,
+        "end": 377.389,
+        "text": "And you mentioned a job, so I want to take you back in time,"
+      },
+      {
+        "start": 377.389,
+        "end": 382.04,
+        "text": "maybe more probably more than thirty years back to your first job."
+      },
+      {
+        "start": 383.24,
+        "end": 384.76,
+        "text": "What can you share with us?"
+      },
+      {
+        "start": 384.96,
+        "end": 385.44,
+        "text": "Wow."
+      },
+      {
+        "start": 385.44,
+        "end": 391.04,
+        "text": "So I guess my very first job, I went to what they call in the UK a grammar school."
+      },
+      {
+        "start": 391.12,
+        "end": 392.72,
+        "text": "It would be like a magnet school in the States."
+      },
+      {
+        "start": 392.88,
+        "end": 394.88,
+        "text": "You had to kind of pass a test to get there."
+      },
+      {
+        "start": 395.68,
+        "end": 396.24,
+        "text": "But I."
+      },
+      {
+        "start": 396.46,
+        "end": 399.659,
+        "text": "I really desperately wanted a motorcycle when I was 16."
+      },
+      {
+        "start": 399.979,
+        "end": 402.139,
+        "text": "And my mom was like, Well, I'm never getting you one of those."
+      },
+      {
+        "start": 402.22,
+        "end": 404.78,
+        "text": "I'm like, Okay, so I got two jobs."
+      },
+      {
+        "start": 405.099,
+        "end": 410.0,
+        "text": "I would work while I was going through high school, I'd work about 16 hours a week at Tesco's."
+      },
+      {
+        "start": 410.08,
+        "end": 414.282,
+        "text": "It would be like the local supermarket, just checking out and taking care of,"
+      },
+      {
+        "start": 414.282,
+        "end": 417.12,
+        "text": "you know, stocking the shelves and things like that."
+      },
+      {
+        "start": 417.44,
+        "end": 421.498,
+        "text": "And then I got this amazing job for eight hours a week as a lab technician."
+      },
+      {
+        "start": 421.498,
+        "end": 423.5,
+        "text": "In the electronics lab at the school."
+      },
+      {
+        "start": 423.82,
+        "end": 428.319,
+        "text": "So we were downloading to Terry Houd, like we were downloading like satellite feeds"
+      },
+      {
+        "start": 428.319,
+        "end": 432.416,
+        "text": "and information and you know, cleaning up the resistors and the transistors"
+      },
+      {
+        "start": 432.416,
+        "end": 435.42,
+        "text": "and the circuit boards and cleaning the soldering ions."
+      },
+      {
+        "start": 435.74,
+        "end": 438.24,
+        "text": "But it was an incredibly traditional school."
+      },
+      {
+        "start": 438.32,
+        "end": 441.36,
+        "text": "It was a boys-only school, very kind of formal and traditional."
+      },
+      {
+        "start": 441.52,
+        "end": 445.941,
+        "text": "Like it has some history going back close to 800 years."
+      },
+      {
+        "start": 445.941,
+        "end": 449.8,
+        "text": "Cochester Royal Grammar School, and very formal."
+      },
+      {
+        "start": 450.12,
+        "end": 454.52,
+        "text": "And then you've got this wild shock of hair."
+      },
+      {
+        "start": 454.639,
+        "end": 462.479,
+        "text": "Electronics teacher called Mr. Warren, and he did maypole dancing, smoked pot after school."
+      },
+      {
+        "start": 462.92,
+        "end": 466.36,
+        "text": "And was into herbal teas, which even that seemed weird back then."
+      },
+      {
+        "start": 466.52,
+        "end": 471.635,
+        "text": "So he was just like this wonderful person to be around and see how he engaged with life"
+      },
+      {
+        "start": 471.635,
+        "end": 474.28,
+        "text": "in a non-traditional but still impactful way."
+      },
+      {
+        "start": 474.52,
+        "end": 476.36,
+        "text": "So it was great to hang out with him."
+      },
+      {
+        "start": 476.96,
+        "end": 479.36,
+        "text": "I got to get really good at electronics, which was fun."
+      },
+      {
+        "start": 479.68,
+        "end": 480.18,
+        "text": "Yeah, Mr."
+      },
+      {
+        "start": 480.24,
+        "end": 482.24,
+        "text": "Warren World, that's a very interesting story."
+      },
+      {
+        "start": 482.479,
+        "end": 485.527,
+        "text": "And also the fact that you remember him,"
+      },
+      {
+        "start": 485.527,
+        "end": 491.7,
+        "text": "speaks you know, it uh speaks loud to uh to the impact it had on you probably."
+      },
+      {
+        "start": 491.86,
+        "end": 493.74,
+        "text": "So, absolutely."
+      },
+      {
+        "start": 493.74,
+        "end": 494.46,
+        "text": "It was great."
+      },
+      {
+        "start": 495.34,
+        "end": 495.979,
+        "text": "Fantastic."
+      },
+      {
+        "start": 496.139,
+        "end": 497.9,
+        "text": "Listen, it's super exciting."
+      },
+      {
+        "start": 498.139,
+        "end": 503.819,
+        "text": "I'm guessing you're not the only 16 year old guy that wanted a motorcycle."
+      },
+      {
+        "start": 505.98,
+        "end": 507.26,
+        "text": "And had to work to get it."
+      },
+      {
+        "start": 507.5,
+        "end": 510.94,
+        "text": "So I'm sure a lot of people would can connect to that story."
+      },
+      {
+        "start": 511.58,
+        "end": 512.3,
+        "text": "I'm curious."
+      },
+      {
+        "start": 512.46,
+        "end": 515.5,
+        "text": "So jumping forward, right, you have a long successful career."
+      },
+      {
+        "start": 515.58,
+        "end": 517.26,
+        "text": "You've been doing a lot of things."
+      },
+      {
+        "start": 517.9,
+        "end": 523.66,
+        "text": "Maybe you can take me back to some of the hardest challenges you had to solve and how did you go about that?"
+      },
+      {
+        "start": 523.98,
+        "end": 528.735,
+        "text": "Now a quick word from our sponsor. Confluent Developer The Podcast is brought to you by"
+      },
+      {
+        "start": 528.735,
+        "end": 534.42,
+        "text": "Confluent Developer the website, which has everything you need as a developer of data streaming systems."
+      },
+      {
+        "start": 534.54,
+        "end": 536.14,
+        "text": "And it's completely free."
+      },
+      {
+        "start": 536.46,
+        "end": 543.74,
+        "text": "We've got curriculum, hands-on exercises, executable tutorials, the online data streaming engineer certification, also free."
+      },
+      {
+        "start": 544.06,
+        "end": 546.7,
+        "text": "A way to find a meetup near you, those are free."
+      },
+      {
+        "start": 547.02,
+        "end": 548.06,
+        "text": "Everything is there."
+      },
+      {
+        "start": 549.06,
+        "end": 554.42,
+        "text": "Want you to be successful in your journey as a data streaming engineer, and this is the site that has what you need."
+      },
+      {
+        "start": 554.74,
+        "end": 555.604,
+        "text": "Check it out at"
+      },
+      {
+        "start": 555.604,
+        "end": 558.012,
+        "text": "developer.confluent.io"
+      },
+      {
+        "start": 558.02,
+        "end": 559.22,
+        "text": "That's developer."
+      },
+      {
+        "start": 559.46,
+        "end": 560.26,
+        "text": "confluent."
+      },
+      {
+        "start": 560.42,
+        "end": 561.14,
+        "text": "io."
+      },
+      {
+        "start": 561.46,
+        "end": 562.98,
+        "text": "Now back to the show."
+      },
+      {
+        "start": 563.82,
+        "end": 574.06,
+        "text": "So, I think one of the most interesting ones, and it's funny because it's a challenge that I started working on 25 years ago, and I feel like it's becoming just as relevant today."
+      },
+      {
+        "start": 575.04,
+        "end": 589.12,
+        "text": "I I was I actually run an ad agency in Houston, Texas, and then the client started asking for Oh, we want to have a CD-ROM or we want one of these website things that people are talking about."
+      },
+      {
+        "start": 589.279,
+        "end": 601.82,
+        "text": "I mean, this was back in 1994, I started this business. So by 1996, all these people were starting to ask for websites, and I was getting really sick and tired because I was basically just"
+      },
+      {
+        "start": 601.82,
+        "end": 605.1,
+        "text": "Manually coding the same HTML for a whole bunch of websites."
+      },
+      {
+        "start": 605.18,
+        "end": 607.26,
+        "text": "And I'm like, that sucks."
+      },
+      {
+        "start": 608.06,
+        "end": 613.1,
+        "text": "And so then I get to about 97, and I've really fed up with this, and I start."
+      },
+      {
+        "start": 613.42,
+        "end": 617.18,
+        "text": "Looking for patterns, like, how can I charge as much money but do less work?"
+      },
+      {
+        "start": 617.819,
+        "end": 621.18,
+        "text": "And what I noticed was, unsurprisingly, there was commonality."
+      },
+      {
+        "start": 621.42,
+        "end": 622.86,
+        "text": "Basically, I, who knew?"
+      },
+      {
+        "start": 623.019,
+        "end": 629.12,
+        "text": "I, I, um, Identified the Squarespace or I guess Shopify."
+      },
+      {
+        "start": 629.2,
+        "end": 638.74,
+        "text": "I basically took that model and said, how can you create what then I modeled as a set of domain-specific languages So, DSLs for describing commonalities."
+      },
+      {
+        "start": 638.98,
+        "end": 640.1,
+        "text": "There are some things you don't care about."
+      },
+      {
+        "start": 640.26,
+        "end": 643.86,
+        "text": "If you don't care about user authentication and login, great, it'll be a default flow."
+      },
+      {
+        "start": 644.18,
+        "end": 656.86,
+        "text": "If you do care, Then we need to go a little further down, and there will be kind of like a decision, a set of questions we would ask you that would determine: oh, you want this kind of login or that kind, and these parameters around the password length, or no."
+      },
+      {
+        "start": 657.1,
+        "end": 657.899,
+        "text": "So you could get."
+      },
+      {
+        "start": 658.06,
+        "end": 659.82,
+        "text": "As granular as you wanted."
+      },
+      {
+        "start": 660.14,
+        "end": 666.54,
+        "text": "And then again, it had content management, e-commerce, because, like, you think about a product catalogue, right?"
+      },
+      {
+        "start": 666.62,
+        "end": 671.42,
+        "text": "You've got a category tree, you've got products, but then you have product variants that can."
+      },
+      {
+        "start": 671.74,
+        "end": 674.38,
+        "text": "Either be described, I could geek out just on this."
+      },
+      {
+        "start": 674.54,
+        "end": 677.1,
+        "text": "It turns out that products are actually quite complicated."
+      },
+      {
+        "start": 677.26,
+        "end": 679.34,
+        "text": "Some of them, you just have variants."
+      },
+      {
+        "start": 679.42,
+        "end": 683.98,
+        "text": "So it's like I want to pick a color from a drop-down list and a size from a drop-down list."
+      },
+      {
+        "start": 684.62,
+        "end": 687.5,
+        "text": "Others, so that those are basically parametrizing your product."
+      },
+      {
+        "start": 687.58,
+        "end": 691.899,
+        "text": "So you just have a single product, and then you'd have two parameters, each of which was an arm, right?"
+      },
+      {
+        "start": 691.98,
+        "end": 696.899,
+        "text": "You could select one of n values for Whatever the combination amount was."
+      },
+      {
+        "start": 697.22,
+        "end": 703.259,
+        "text": "But then sometimes it's like, no, no, no, we actually don't do a medium in blue, we only do the medium in green and yellow."
+      },
+      {
+        "start": 703.259,
+        "end": 706.139,
+        "text": "And we have skews and we have inventory quantities."
+      },
+      {
+        "start": 706.459,
+        "end": 712.92,
+        "text": "And so then instead of parameterizing it, I had what I called back then subproducts, which was basically the individual SKUs."
+      },
+      {
+        "start": 712.92,
+        "end": 722.04,
+        "text": "But you can still parameterize them because you might want to, I don't know, allow somebody to have a custom logo on the shirt, or they want to be able to put a message."
+      },
+      {
+        "start": 722.12,
+        "end": 723.48,
+        "text": "So, personalization."
+      },
+      {
+        "start": 724.6,
+        "end": 734.12,
+        "text": "Basically, I was just describing this set of tools and parameters for describing most of the websites I had to build so I could charge as much money without doing as much work."
+      },
+      {
+        "start": 734.96,
+        "end": 741.44,
+        "text": "It's not, well, you describe it as kind of like a hard problem, but today is kind of like a vibe coding experience, no?"
+      },
+      {
+        "start": 741.839,
+        "end": 742.959,
+        "text": "Well, that's well."
+      },
+      {
+        "start": 743.12,
+        "end": 745.92,
+        "text": "So, I'm going to come right back to that in a little bit."
+      },
+      {
+        "start": 746.079,
+        "end": 749.279,
+        "text": "But I think that the thing that was interesting to me was: actually, let's go there now."
+      },
+      {
+        "start": 749.6,
+        "end": 753.759,
+        "text": "I think that it's actually more relevant than ever because."
+      },
+      {
+        "start": 754.579,
+        "end": 757.54,
+        "text": "Have you ever gone to a developer and asked them to code something?"
+      },
+      {
+        "start": 757.699,
+        "end": 761.06,
+        "text": "Like maybe you've got somebody you're working with and you're like, oh, could you just code me this?"
+      },
+      {
+        "start": 761.62,
+        "end": 769.44,
+        "text": "And then you look at what they build and you're like I should have been a little more specific because it is go build me an e-commerce site."
+      },
+      {
+        "start": 769.6,
+        "end": 773.759,
+        "text": "And you look at it, it's like, no, not that kind of e-commerce site."
+      },
+      {
+        "start": 774.079,
+        "end": 774.579,
+        "text": "Yes."
+      },
+      {
+        "start": 774.839,
+        "end": 776.12,
+        "text": "I can definitely relate to it."
+      },
+      {
+        "start": 776.199,
+        "end": 781.8,
+        "text": "There's a people mind where learning to fine-tune exactly what you want to get done is an art."
+      },
+      {
+        "start": 782.64,
+        "end": 787.6,
+        "text": "And so, what I'd argue then is, I'm going to argue that it's not the LLM's fault."
+      },
+      {
+        "start": 787.84,
+        "end": 789.44,
+        "text": "It's not that they hallucinate."
+      },
+      {
+        "start": 789.76,
+        "end": 794.24,
+        "text": "It's just that we're simply insufficiently precise in our requirements."
+      },
+      {
+        "start": 795.62,
+        "end": 796.899,
+        "text": "Now, that's not universally true."
+      },
+      {
+        "start": 797.06,
+        "end": 801.22,
+        "text": "Sometimes we're incredibly precise and it just loses context because we put too much context in."
+      },
+      {
+        "start": 801.94,
+        "end": 813.46,
+        "text": "There are a lot of things that can go wrong, but a big part of it, especially as the foundation models get more capable, is saying, firstly, How can we take big problems and decompose them into small problems?"
+      },
+      {
+        "start": 813.78,
+        "end": 818.66,
+        "text": "If I'm going to go to an application and say, I want a web application, like now."
+      },
+      {
+        "start": 818.839,
+        "end": 832.04,
+        "text": "How about I say, here is my business context, here's my ICP for my audience, here's the competitive landscape, here is my voice and tone for the application, like the style, the vibe, here is the design."
+      },
+      {
+        "start": 832.14,
+        "end": 834.38,
+        "text": "Specs for it from a UI perspective."
+      },
+      {
+        "start": 834.7,
+        "end": 843.06,
+        "text": "And then I would like you to work with me to describe user journeys, And then you iterate with the model on the user journeys."
+      },
+      {
+        "start": 843.14,
+        "end": 848.1,
+        "text": "And once you agree with those, you're like, great, now what I want you to do is slice this into thinly sliced user stories."
+      },
+      {
+        "start": 848.42,
+        "end": 848.82,
+        "text": "Great."
+      },
+      {
+        "start": 848.82,
+        "end": 853.78,
+        "text": "Once you iterate on that, then you put them into another tool to create formalized PRDs."
+      },
+      {
+        "start": 854.0,
+        "end": 864.0,
+        "text": "And I would argue, going back to what I was doing 25 years ago, people have already started to talk about this possible world where maybe code becomes ephemeral."
+      },
+      {
+        "start": 864.24,
+        "end": 866.8,
+        "text": "Maybe we have another level of abstraction."
+      },
+      {
+        "start": 867.46,
+        "end": 870.34,
+        "text": "It's possible, but not if you have a three-paragraph prompt."
+      },
+      {
+        "start": 870.5,
+        "end": 884.96,
+        "text": "If you just say, go give me a Shopify Like website that allows me to sell baseball goods, that's not Sufficiently precise, detailed, and ambiguous to replace the code that it happens to generate."
+      },
+      {
+        "start": 886.339,
+        "end": 904.68,
+        "text": "But if we had a rich set of DSLs that described user authentication that described screens and workflows that described business objects with the Properties with the validation constraints, then permissioning, so which users can do what things to which properties on what objects."
+      },
+      {
+        "start": 905.0,
+        "end": 916.54,
+        "text": "Eventually, you could actually get to something that was not as complex or implementation specific as code, but that would allow you to unambiguously"
+      },
+      {
+        "start": 916.54,
+        "end": 923.18,
+        "text": "Regenerate that application in any arbitrary language or frameworks that met that functionality."
+      },
+      {
+        "start": 923.5,
+        "end": 933.66,
+        "text": "And so my personal belief is that we're actually moving into a world where eventually we could find that the vast majority of code becomes ephemeral over three to eight years."
+      },
+      {
+        "start": 934.22,
+        "end": 948.38,
+        "text": "but only if you have sufficiently rigorous DSLs for becoming the true source of implementation and source of specification for both the acceptance tests and the implementation in a given language and framework."
+      },
+      {
+        "start": 948.82,
+        "end": 960.98,
+        "text": "So essentially, you need to know very in detail what you want to get done even today with the different tools that are available out there for pipe coding and creating all the diagrams and so on."
+      },
+      {
+        "start": 961.18,
+        "end": 967.34,
+        "text": "And the one other thing is yes and no, because then what you do is you can then start to think about intelligent defaults."
+      },
+      {
+        "start": 967.66,
+        "end": 974.38,
+        "text": "When we look at the fact that we Outsource material subsets of our applications now to SaaS vendors, right?"
+      },
+      {
+        "start": 974.62,
+        "end": 976.06,
+        "text": "I'm not going to build authentication."
+      },
+      {
+        "start": 976.14,
+        "end": 981.18,
+        "text": "I'll use Auth0 or FusionAuth or one of the other tools for doing that."
+      },
+      {
+        "start": 981.42,
+        "end": 981.98,
+        "text": "Great."
+      },
+      {
+        "start": 982.64,
+        "end": 997.019,
+        "text": "What they do is effectively you can look at them as a concrete implementation of a set of configuration options and or DSLs for describing The universe of possible authentication systems you can build."
+      },
+      {
+        "start": 997.339,
+        "end": 1000.139,
+        "text": "Do you want to allow 2FA or require it?"
+      },
+      {
+        "start": 1000.38,
+        "end": 1007.42,
+        "text": "Are you going to Support text messaging for 2FA, or is this like so high value that that's insufficiently secure?"
+      },
+      {
+        "start": 1007.74,
+        "end": 1010.38,
+        "text": "Do you want to support magic links via email?"
+      },
+      {
+        "start": 1010.62,
+        "end": 1012.62,
+        "text": "Do you want to allow social logins?"
+      },
+      {
+        "start": 1012.699,
+        "end": 1019.16,
+        "text": "Do you want to allow Email and password login, or do you want to require a social login and which socials do you want to support?"
+      },
+      {
+        "start": 1019.48,
+        "end": 1024.939,
+        "text": "Well, for those subsets, there's stuff I care about for any given app, and there's stuff I don't."
+      },
+      {
+        "start": 1024.939,
+        "end": 1033.899,
+        "text": "So, maybe if I'm building a highly secure app, I'm going to spend, I'm going to configure every one of those possible options to say this is exactly how I want it secured."
+      },
+      {
+        "start": 1034.459,
+        "end": 1037.819,
+        "text": "If I'm building, I don't know, a wedding registry website."
+      },
+      {
+        "start": 1038.019,
+        "end": 1038.819,
+        "text": "I don't care."
+      },
+      {
+        "start": 1038.899,
+        "end": 1041.139,
+        "text": "I just give people a bunch of social logins."
+      },
+      {
+        "start": 1041.299,
+        "end": 1042.74,
+        "text": "I don't need 2FA."
+      },
+      {
+        "start": 1043.059,
+        "end": 1047.939,
+        "text": "And they just use good practices that you already know about user authentication."
+      },
+      {
+        "start": 1048.14,
+        "end": 1060.26,
+        "text": "So given that, I see a future where we start to decouple these configurations and DSLs from their concrete implementations and say, actually And I don't want his ear."
+      },
+      {
+        "start": 1060.26,
+        "end": 1062.58,
+        "text": "They're great, but maybe you don't need auth zero."
+      },
+      {
+        "start": 1062.9,
+        "end": 1076.06,
+        "text": "All you need is a way of specifying authentication. And then there can be multi either you can Vibe code an implementation that meets those requirements, and/or you can pick from one of multiple vendors."
+      },
+      {
+        "start": 1076.06,
+        "end": 1085.18,
+        "text": "that can plug and play, match to, and meet the requirements and the specifications you have for your particular user authentication."
+      },
+      {
+        "start": 1085.22,
+        "end": 1096.42,
+        "text": "And then the nice thing is, now the amount of specification required for an application is as deep as you care about for any subset of the application."
+      },
+      {
+        "start": 1096.6,
+        "end": 1102.519,
+        "text": "So, if you deeply care about user authentication, yeah, you can have like 600 lines describing it in a very structured manner."
+      },
+      {
+        "start": 1102.84,
+        "end": 1108.64,
+        "text": "If you don't care about Authentication at all, you're just going to have three default configuration settings."
+      },
+      {
+        "start": 1108.96,
+        "end": 1118.08,
+        "text": "And the best part is if your spec is like, if my spec for user author for a simple site was just like, I don't know, I just want it to be fairly secure."
+      },
+      {
+        "start": 1118.3,
+        "end": 1128.7,
+        "text": "The implementation of fairly secure over the year would become more and more rich and would continue to keep up to date with past keys and new things automatically."
+      },
+      {
+        "start": 1129.02,
+        "end": 1139.74,
+        "text": "Because you could simply say, well, I don't know, what is reasonably secure now, have a detailed standard prompt for that, and then either generate or integrate with a third party tool for doing that."
+      },
+      {
+        "start": 1139.74,
+        "end": 1153.9,
+        "text": "Okay, so if I understand correctly, it's essentially a system that enables different type of users, right, from wedding planners to people that need a more secure environment like in e-commerce and so on."
+      },
+      {
+        "start": 1155.04,
+        "end": 1172.5,
+        "text": "to build their website in a way where they can use a DSL or describe or fill up a form that describe what exactly they need and kind of your system all the way and I'm sending people back all the way in 1996, 1997 is kind of automatically"
+      },
+      {
+        "start": 1172.5,
+        "end": 1176.419,
+        "text": "Builds that for the customer, right?"
+      },
+      {
+        "start": 1176.82,
+        "end": 1177.14,
+        "text": "Yeah."
+      },
+      {
+        "start": 1177.14,
+        "end": 1179.86,
+        "text": "So I mean, I want to be realistic, going back and then forward."
+      },
+      {
+        "start": 1180.02,
+        "end": 1182.02,
+        "text": "Back in 1999."
+      },
+      {
+        "start": 1182.04,
+        "end": 1183.08,
+        "text": "I had a system."
+      },
+      {
+        "start": 1184.04,
+        "end": 1186.84,
+        "text": "So my concrete implementation was as follows."
+      },
+      {
+        "start": 1187.8,
+        "end": 1194.9,
+        "text": "This was back when You were using, you could use Perl still was a cool choice."
+      },
+      {
+        "start": 1195.22,
+        "end": 1197.94,
+        "text": "You could use ASP Classic, because I don't believe."
+      },
+      {
+        "start": 1198.02,
+        "end": 1200.42,
+        "text": "NET had dropped till about 2000."
+      },
+      {
+        "start": 1200.74,
+        "end": 1202.74,
+        "text": "Or you could use languages."
+      },
+      {
+        "start": 1202.9,
+        "end": 1208.58,
+        "text": "I think PHP was about, and I was using one of my clients said, We're using this thing called Cold Fusion."
+      },
+      {
+        "start": 1208.9,
+        "end": 1211.72,
+        "text": "I'm like Sure, let's give it a go."
+      },
+      {
+        "start": 1212.36,
+        "end": 1221.54,
+        "text": "And the fascinating thing is that by the time I stopped doing this, CodeFusion actually became the first dynamically typed language on the JVM."
+      },
+      {
+        "start": 1221.54,
+        "end": 1224.02,
+        "text": "I'm a huge fan of Guillermoforge and Groovy."
+      },
+      {
+        "start": 1224.26,
+        "end": 1228.74,
+        "text": "I've been involved with that community for a while, but actually, ColdFusion was there first."
+      },
+      {
+        "start": 1230.919,
+        "end": 1236.28,
+        "text": "And so within the CodeFusion world, one of the things I liked about it is it was a dynamically typed language."
+      },
+      {
+        "start": 1236.6,
+        "end": 1249.8,
+        "text": "And a little bit like Ruby, it was designed to make metaprogramming easy, even for people like me who's Are not very good with parentheses, so could never quite get their head around closure or common lisp or any of those."
+      },
+      {
+        "start": 1250.44,
+        "end": 1253.48,
+        "text": "And what it allowed you to do was, I literally had these."
+      },
+      {
+        "start": 1253.66,
+        "end": 1261.82,
+        "text": "Base classes, I had like a base class, and then I had classes for user and for product and for content and all the rest."
+      },
+      {
+        "start": 1261.86,
+        "end": 1271.22,
+        "text": "And what it would do is it would basically load at runtime an XML file that described, oh, these are the properties of a product and these are the properties of this and that."
+      },
+      {
+        "start": 1271.46,
+        "end": 1281.32,
+        "text": "I'd already run a script to automatically provision the database schema based upon What your properties were, and then it basically inferred, it basically used method missing."
+      },
+      {
+        "start": 1281.4,
+        "end": 1293.94,
+        "text": "It said, well, if there's not a List method or list products or list products within a category method, then what it will do is it will use this base class method that does all that stuff."
+      },
+      {
+        "start": 1294.04,
+        "end": 1299.96,
+        "text": "What it allowed me to do was configure 95% of the application using basically DSLs."
+      },
+      {
+        "start": 1300.04,
+        "end": 1303.72,
+        "text": "I used XML just because it was an easy way of implementing it back then."
+      },
+      {
+        "start": 1304.14,
+        "end": 1317.9,
+        "text": "And then for the other 5%, if I'm like, oh, no, no, no, I want my product category list to be really different for this customer, I wrote a 20-line product category list file within the class file, and it just overrode it, didn't drop down to the method missing."
+      },
+      {
+        "start": 1318.06,
+        "end": 1318.7,
+        "text": "So I did have."
+      },
+      {
+        "start": 1319.14,
+        "end": 1325.62,
+        "text": "Have 5% of custom code for the use cases that I'd like, yeah, nobody else is ever going to want this."
+      },
+      {
+        "start": 1325.94,
+        "end": 1328.96,
+        "text": "But I was able to Quotes, regenerate the application."
+      },
+      {
+        "start": 1329.12,
+        "end": 1341.2,
+        "text": "I was effectively able to do round-trip code generation because I was just interpreting these DSL files, these XML files at runtime, rather than actually generating thousands of lines of ColdFusion code."
+      },
+      {
+        "start": 1341.22,
+        "end": 1342.18,
+        "text": "That's brilliant."
+      },
+      {
+        "start": 1342.34,
+        "end": 1343.06,
+        "text": "It's brilliant."
+      },
+      {
+        "start": 1343.14,
+        "end": 1351.14,
+        "text": "It's a great way to automate a lot of the work and get things done and support many customers, I assume, at the same time."
+      },
+      {
+        "start": 1351.26,
+        "end": 1353.419,
+        "text": "Well, you know, so that was the problem."
+      },
+      {
+        "start": 1353.74,
+        "end": 1355.98,
+        "text": "I did a great job of building out the technology."
+      },
+      {
+        "start": 1356.139,
+        "end": 1360.519,
+        "text": "If only I'd got more customers, I would probably be coming to you live from my yacht."
+      },
+      {
+        "start": 1360.519,
+        "end": 1362.6,
+        "text": "As it is, I'm coming to you life from my garage."
+      },
+      {
+        "start": 1362.679,
+        "end": 1363.639,
+        "text": "What you gonna do?"
+      },
+      {
+        "start": 1364.279,
+        "end": 1366.919,
+        "text": "Hey, it's you know, sometimes you need the right time."
+      },
+      {
+        "start": 1367.159,
+        "end": 1370.12,
+        "text": "I think the web took off only in the 2000s, right?"
+      },
+      {
+        "start": 1370.419,
+        "end": 1375.62,
+        "text": "So well, I mean, I still whether it was like Gopher and a bunch of other stuff."
+      },
+      {
+        "start": 1375.7,
+        "end": 1376.9,
+        "text": "I'm going to get my timeline wrong."
+      },
+      {
+        "start": 1376.98,
+        "end": 1380.419,
+        "text": "So I know everyone's going to like comment, like, dude, what do you think about it?"
+      },
+      {
+        "start": 1380.5,
+        "end": 1387.88,
+        "text": "But I think like, I remember ninety four. I feel like there were ways of interacting with stuff in maybe 93."
+      },
+      {
+        "start": 1388.12,
+        "end": 1392.6,
+        "text": "But when was the first I think first browser was like 94, 95, it really started to become a thing."
+      },
+      {
+        "start": 1392.76,
+        "end": 1398.26,
+        "text": "96, 97 was when I got a bunch of companies coming in saying, Here's twenty thousand bucks."
+      },
+      {
+        "start": 1398.34,
+        "end": 1400.42,
+        "text": "Go go build me a website."
+      },
+      {
+        "start": 1401.06,
+        "end": 1401.56,
+        "text": "Interesting."
+      },
+      {
+        "start": 1401.86,
+        "end": 1403.46,
+        "text": "Today it's like here, twenty million."
+      },
+      {
+        "start": 1403.7,
+        "end": 1405.86,
+        "text": "I go do some AI agent."
+      },
+      {
+        "start": 1408.34,
+        "end": 1413.94,
+        "text": "So, I guess, what are some of the learnings that you took from that experience?"
+      },
+      {
+        "start": 1414.4,
+        "end": 1415.76,
+        "text": "So that's a great question."
+      },
+      {
+        "start": 1416.559,
+        "end": 1423.039,
+        "text": "Well, just very briefly, to take it from a business perspective, focus more on sales than technology."
+      },
+      {
+        "start": 1424.0,
+        "end": 1427.28,
+        "text": "Otherwise, I would have probably done much better financially."
+      },
+      {
+        "start": 1427.6,
+        "end": 1428.4,
+        "text": "But I just loved getting."
+      },
+      {
+        "start": 1428.679,
+        "end": 1430.6,
+        "text": "Geeking out about the DSLs."
+      },
+      {
+        "start": 1430.919,
+        "end": 1445.5,
+        "text": "I think the biggest takeaway for me now, especially when I see, I still remember I was at a There was like a hacker house in Beat Up is a bunch of folks from one of these kind of research science hacker houses in the Bay Area came to New York a year or two ago."
+      },
+      {
+        "start": 1445.82,
+        "end": 1449.26,
+        "text": "And I still remember being like mortified because I I thought I was pretty cool."
+      },
+      {
+        "start": 1449.34,
+        "end": 1451.88,
+        "text": "Like I knew I couldn't keep up with a bunch of, you know,"
+      },
+      {
+        "start": 1451.88,
+        "end": 1452.84,
+        "text": "ML researchers."
+      },
+      {
+        "start": 1452.92,
+        "end": 1455.4,
+        "text": "I taught data science at Columbia Business School."
+      },
+      {
+        "start": 1455.72,
+        "end": 1458.28,
+        "text": "Like, but I'm not, I'm not all that."
+      },
+      {
+        "start": 1459.24,
+        "end": 1464.98,
+        "text": "And I still I was so excited though, because I'd read a paper like a week. Before I'm like, I got it."
+      },
+      {
+        "start": 1465.14,
+        "end": 1466.66,
+        "text": "I'm just gonna like drop that one paper."
+      },
+      {
+        "start": 1466.74,
+        "end": 1469.54,
+        "text": "So I, you know, I referenced whatever the paper was I'd read."
+      },
+      {
+        "start": 1470.18,
+        "end": 1473.1,
+        "text": "Everyone looked at me like Where did you come from?"
+      },
+      {
+        "start": 1473.1,
+        "end": 1477.42,
+        "text": "It's like, didn't you see the like three updates in the last 36 hours?"
+      },
+      {
+        "start": 1477.66,
+        "end": 1479.9,
+        "text": "Like, you're like a week behind the times."
+      },
+      {
+        "start": 1479.98,
+        "end": 1481.9,
+        "text": "Like, what are you even talking about here?"
+      },
+      {
+        "start": 1482.46,
+        "end": 1496.74,
+        "text": "So, um Given that there are these amazingly smart people who are building our future, the one thing I'd say is that it's worth looking for prior art."
+      },
+      {
+        "start": 1496.74,
+        "end": 1512.24,
+        "text": "I look at so many problems around fundamentally, one of the problems we're trying to solve is the ability to Unambiguously and precisely specify our requirements in a way that doesn't require code."
+      },
+      {
+        "start": 1512.4,
+        "end": 1520.54,
+        "text": "The code's great, but that should eventually become ephemeral so that, hey, you get a better model or you want to You need suddenly you get new non-functional requirements."
+      },
+      {
+        "start": 1520.7,
+        "end": 1528.46,
+        "text": "Oh, this needs to perform better, so we're going to regenerate it in Rust versus in Python or TypeScript or whatever it was running in initially."
+      },
+      {
+        "start": 1528.96,
+        "end": 1535.52,
+        "text": "And if we want to do that, I think the I would I used to present there was a code generation conference in Cambridge."
+      },
+      {
+        "start": 1535.68,
+        "end": 1542.32,
+        "text": "I got to present at like Oopsler, which was a conference about like what do they call them, software product lines and code generation."
+      },
+      {
+        "start": 1542.48,
+        "end": 1545.64,
+        "text": "So The biggest takeaway is look for the prior art."
+      },
+      {
+        "start": 1545.88,
+        "end": 1554.52,
+        "text": "Turns out the history rhymes, and sometimes you can get inspiration and insights from something, even if it's decades old."
+      },
+      {
+        "start": 1555.06,
+        "end": 1555.56,
+        "text": "Thank you."
+      },
+      {
+        "start": 1555.7,
+        "end": 1556.34,
+        "text": "Thank you so much."
+      },
+      {
+        "start": 1556.5,
+        "end": 1562.18,
+        "text": "Yeah, it's a great summary for that this learning."
+      },
+      {
+        "start": 1562.26,
+        "end": 1566.9,
+        "text": "I always feel like with the new generation of NLP and models and everything that we do."
+      },
+      {
+        "start": 1566.98,
+        "end": 1576.1,
+        "text": "At the end of the day, we need to know what we want to do and what we want to get done and have the language to explain that in plain English if we can."
+      },
+      {
+        "start": 1576.78,
+        "end": 1579.9,
+        "text": "and then translate it to all the the other systems."
+      },
+      {
+        "start": 1580.7,
+        "end": 1582.54,
+        "text": "Peter, thank you, thank you, thank you."
+      },
+      {
+        "start": 1582.7,
+        "end": 1584.54,
+        "text": "It was fascinating."
+      },
+      {
+        "start": 1585.12,
+        "end": 1587.04,
+        "text": "Thank you so much for taking the time."
+      },
+      {
+        "start": 1587.28,
+        "end": 1588.8,
+        "text": "I have always been a fan."
+      },
+      {
+        "start": 1588.96,
+        "end": 1592.16,
+        "text": "I've always been like, one day I will get to speak with you."
+      },
+      {
+        "start": 1592.24,
+        "end": 1593.52,
+        "text": "And I'm glad I finally did."
+      },
+      {
+        "start": 1593.68,
+        "end": 1594.96,
+        "text": "So thank you for taking the time."
+      },
+      {
+        "start": 1595.12,
+        "end": 1597.86,
+        "text": "This was a delight. Oh, the pleasure is all mine."
+      },
+      {
+        "start": 1598.5,
+        "end": 1600.74,
+        "text": "There's going to be the website in the comments."
+      },
+      {
+        "start": 1600.9,
+        "end": 1613.1,
+        "text": "So please, please, please follow up with the comments so you can tap into Peter's brain through his magnificent book that he's writing. and all the cool new updates about his new company and new CTO communities."
+      },
+      {
+        "start": 1613.42,
+        "end": 1616.3,
+        "text": "And again, thank you so much and see you soon."
+      }
+    ],
+    "paragraphs": [
+      {
+        "start": 0.001,
+        "end": 14.559,
+        "text": "Today, we're diving into the art and science of building software that lasts. This is Confluent Developer. Wait a minute, you got 400 people working for you, and they know that their job's either going to be eliminated or transformed."
+      },
+      {
+        "start": 14.88,
+        "end": 29.64,
+        "text": "What do you say? I'm going to argue that it's not the LLM's fault. It's not that they hallucinate, it's just that we're simply insufficiently. Precise in our requirements. You know, so that was the problem. I did a great job of building out the technology."
+      },
+      {
+        "start": 29.72,
+        "end": 45.051,
+        "text": "If only I'd got more customers, I would probably be coming to you live from my yacht. Hello there, everyone. I'm Adi Polak, and welcome to Confluent Developer, where we explore the fascinating journeys of software developers tackling complex problems."
+      },
+      {
+        "start": 45.051,
+        "end": 69.383,
+        "text": "In this episode, I'm interviewing Peter Bell, a veteran engineer, founder, educator and community builder with over three decades of experience shaping the future of software. From his early days soldering circuits boards and school labs to building CTO communities and writing a new book on scaling AI and engineering for O'Reilly."
+      },
+      {
+        "start": 69.383,
+        "end": 93.94,
+        "text": "Peter shares a story of vision evolution and the relentless pursuit of clarity in how we build systems. His journey spans everything from pioneering early DSL driven web platforms in the nineties to exploring the future of where code itself becomes a FERMO. Replaced by precise specifications and intelligent defaults."
+      },
+      {
+        "start": 94.26,
+        "end": 126.751,
+        "text": "Let's get into it. Hello, everybody. Welcome back to Confluent Developer. I'm super excited to have this special guest today with me. His name is Peter Bell, a veteran engineer, leader, founder, educator, community builder. with over thirty years of experience planning software engineering, developer advocacy, entrepreneurship, executive leadership, and a deep, deep understanding in systems and how to build them for success."
+      },
+      {
+        "start": 126.751,
+        "end": 146.56,
+        "text": "Peter, welcome. Wow. Well, thanks for making it really easy for me to live up to the billing. Now he's got to be an expert at everything. This better be a good episode. I mean, you are one of top leaders in our industry and super fortunate to have you on the show."
+      },
+      {
+        "start": 146.88,
+        "end": 159.62,
+        "text": "Maybe you want to say a couple of words about yourself and some of the new cool stuff that you work on right now. Sure. So right now I'm super excited about two things. The first is I've just founded, I've been threatening to do this for 15 years."
+      },
+      {
+        "start": 159.7,
+        "end": 175.66,
+        "text": "I've been building CTO communities, monthly meetups, conferences. Finally founded gather.dev. And the goal is to create an invite-only brain trust for CTOs and other engineering leaders to connect with their very closest peers, whether that's CTOs at scale running large orgs."
+      },
+      {
+        "start": 176.08,
+        "end": 194.18,
+        "text": "venture back startups, CTOs or heads of AI. And the goal is to have in person monthly meetups in New York City, online communities and to scale from there. really so that you get people to understand exactly what you're dealing with and you can very quickly vet ideas or challenges that you're facing, and it's free and invite only."
+      },
+      {
+        "start": 194.6,
+        "end": 211.3,
+        "text": "And then the one other fun thing is, I am so excited. The O'Reilly team, I get to host their CTO hour once a quarter, and they've asked me to write a book called Scaling AI in Engineering. A leader's guide to driving alignment, adoption, and impact."
+      },
+      {
+        "start": 211.54,
+        "end": 228.3,
+        "text": "So it's all the non-technical stuff. It's not routers or how you manage your inference workloads or how you deal with any of that. It's like, wait a minute, you've got 400 people. Working for you. And they know that their job's either going to be eliminated or transformed."
+      },
+      {
+        "start": 228.86,
+        "end": 238.34,
+        "text": "What do you say? Then you've got a CEO who's like, so why aren't we doing 10 times the output with a 10th of the staff? Because I saw the case study. And so, you've got to manage their expectations."
+      },
+      {
+        "start": 238.5,
+        "end": 254.78,
+        "text": "And how do you manage this what is fundamentally a change management problem? And I've been interviewing a whole bunch of CTOs, and so that is it is going to be a fascinating book, and I'm also going to have a companion website, which there'll be a link on the gather."
+      },
+      {
+        "start": 254.94,
+        "end": 269.98,
+        "text": "dev website if anyone wants to find it. It's amazing. It's definitely necessary. It's something that I always hear from different engineering leaders in this space. And also the fact that as an engineers, as leaders, we all need to kind of skill up, right?"
+      },
+      {
+        "start": 270.3,
+        "end": 287.5,
+        "text": "This is the time to learn new things, embrace change and see how we can develop as human beings in this new space. of AI that we can continue having a a good successful, hopefully successful career. So super curious."
+      },
+      {
+        "start": 287.84,
+        "end": 305.26,
+        "text": "Yeah, super curious about your book. I'm definitely going to be purchasing a copy. Do you have a date? I know this is a little bit stressful for book authors Oh no, it's the stressful was the fact that the first two chapters were due this morning, but I'm like really close and they're being very flexible."
+      },
+      {
+        "start": 305.42,
+        "end": 318.66,
+        "text": "So by tomorrow, we'll have two chapters in. This will launch early next year, but I think what's going to be just as interesting. Is there is going to be a website. You've got to give me a couple of days, but if you go to gather."
+      },
+      {
+        "start": 318.82,
+        "end": 341.2,
+        "text": "dev, you'll see a link called books that will get you there. And we're going to be dropping, starting end of October, we're going to drop weekly interviews with thought leaders and with CTOs from large companies. So there will be ongoing insights, advice, and information long before the book's available, and then it'll also be accessible on early release a little bit before it's published."
+      },
+      {
+        "start": 341.36,
+        "end": 359.36,
+        "text": "But the actual publication date should be early Q2 of next year. Fantastic. Okay, everybody, stay tuned for the website and the opportunity to learn from some of the greatest minds in the industry. It's cool, it's great. What I love about my job is basically I just interview people way smarter than me."
+      },
+      {
+        "start": 359.68,
+        "end": 371.12,
+        "text": "And then people are like, wow, that was a really smart conversation. And Peter was there. I guess he must be smart. It's the awesome life hack. If you're not really that smart, just interview people smarter than yourself. It works perfectly."
+      },
+      {
+        "start": 371.44,
+        "end": 391.04,
+        "text": "That's the best advice. And you mentioned a job, so I want to take you back in time, maybe more probably more than thirty years back to your first job. What can you share with us? Wow. So I guess my very first job, I went to what they call in the UK a grammar school."
+      },
+      {
+        "start": 391.12,
+        "end": 402.139,
+        "text": "It would be like a magnet school in the States. You had to kind of pass a test to get there. But I. I really desperately wanted a motorcycle when I was 16. And my mom was like, Well, I'm never getting you one of those."
+      },
+      {
+        "start": 402.22,
+        "end": 417.12,
+        "text": "I'm like, Okay, so I got two jobs. I would work while I was going through high school, I'd work about 16 hours a week at Tesco's. It would be like the local supermarket, just checking out and taking care of, you know, stocking the shelves and things like that."
+      },
+      {
+        "start": 417.44,
+        "end": 435.42,
+        "text": "And then I got this amazing job for eight hours a week as a lab technician. In the electronics lab at the school. So we were downloading to Terry Houd, like we were downloading like satellite feeds and information and you know, cleaning up the resistors and the transistors and the circuit boards and cleaning the soldering ions."
+      },
+      {
+        "start": 435.74,
+        "end": 454.52,
+        "text": "But it was an incredibly traditional school. It was a boys-only school, very kind of formal and traditional. Like it has some history going back close to 800 years. Cochester Royal Grammar School, and very formal. And then you've got this wild shock of hair."
+      },
+      {
+        "start": 454.639,
+        "end": 474.28,
+        "text": "Electronics teacher called Mr. Warren, and he did maypole dancing, smoked pot after school. And was into herbal teas, which even that seemed weird back then. So he was just like this wonderful person to be around and see how he engaged with life in a non-traditional but still impactful way."
+      },
+      {
+        "start": 474.52,
+        "end": 491.7,
+        "text": "So it was great to hang out with him. I got to get really good at electronics, which was fun. Yeah, Mr. Warren World, that's a very interesting story. And also the fact that you remember him, speaks you know, it uh speaks loud to uh to the impact it had on you probably."
+      },
+      {
+        "start": 491.86,
+        "end": 510.94,
+        "text": "So, absolutely. It was great. Fantastic. Listen, it's super exciting. I'm guessing you're not the only 16 year old guy that wanted a motorcycle. And had to work to get it. So I'm sure a lot of people would can connect to that story."
+      },
+      {
+        "start": 511.58,
+        "end": 523.66,
+        "text": "I'm curious. So jumping forward, right, you have a long successful career. You've been doing a lot of things. Maybe you can take me back to some of the hardest challenges you had to solve and how did you go about that?"
+      },
+      {
+        "start": 523.98,
+        "end": 543.74,
+        "text": "Now a quick word from our sponsor. Confluent Developer The Podcast is brought to you by Confluent Developer the website, which has everything you need as a developer of data streaming systems. And it's completely free. We've got curriculum, hands-on exercises, executable tutorials, the online data streaming engineer certification, also free."
+      },
+      {
+        "start": 544.06,
+        "end": 559.22,
+        "text": "A way to find a meetup near you, those are free. Everything is there. Want you to be successful in your journey as a data streaming engineer, and this is the site that has what you need. Check it out at developer.confluent.io That's developer."
+      },
+      {
+        "start": 559.46,
+        "end": 574.06,
+        "text": "confluent. io. Now back to the show. So, I think one of the most interesting ones, and it's funny because it's a challenge that I started working on 25 years ago, and I feel like it's becoming just as relevant today."
+      },
+      {
+        "start": 575.04,
+        "end": 605.1,
+        "text": "I I was I actually run an ad agency in Houston, Texas, and then the client started asking for Oh, we want to have a CD-ROM or we want one of these website things that people are talking about. I mean, this was back in 1994, I started this business. So by 1996, all these people were starting to ask for websites, and I was getting really sick and tired because I was basically just Manually coding the same HTML for a whole bunch of websites."
+      },
+      {
+        "start": 605.18,
+        "end": 621.18,
+        "text": "And I'm like, that sucks. And so then I get to about 97, and I've really fed up with this, and I start. Looking for patterns, like, how can I charge as much money but do less work? And what I noticed was, unsurprisingly, there was commonality."
+      },
+      {
+        "start": 621.42,
+        "end": 638.74,
+        "text": "Basically, I, who knew? I, I, um, Identified the Squarespace or I guess Shopify. I basically took that model and said, how can you create what then I modeled as a set of domain-specific languages So, DSLs for describing commonalities."
+      },
+      {
+        "start": 638.98,
+        "end": 656.86,
+        "text": "There are some things you don't care about. If you don't care about user authentication and login, great, it'll be a default flow. If you do care, Then we need to go a little further down, and there will be kind of like a decision, a set of questions we would ask you that would determine: oh, you want this kind of login or that kind, and these parameters around the password length, or no."
+      },
+      {
+        "start": 657.1,
+        "end": 671.42,
+        "text": "So you could get. As granular as you wanted. And then again, it had content management, e-commerce, because, like, you think about a product catalogue, right? You've got a category tree, you've got products, but then you have product variants that can."
+      },
+      {
+        "start": 671.74,
+        "end": 683.98,
+        "text": "Either be described, I could geek out just on this. It turns out that products are actually quite complicated. Some of them, you just have variants. So it's like I want to pick a color from a drop-down list and a size from a drop-down list."
+      },
+      {
+        "start": 684.62,
+        "end": 696.899,
+        "text": "Others, so that those are basically parametrizing your product. So you just have a single product, and then you'd have two parameters, each of which was an arm, right? You could select one of n values for Whatever the combination amount was."
+      },
+      {
+        "start": 697.22,
+        "end": 712.92,
+        "text": "But then sometimes it's like, no, no, no, we actually don't do a medium in blue, we only do the medium in green and yellow. And we have skews and we have inventory quantities. And so then instead of parameterizing it, I had what I called back then subproducts, which was basically the individual SKUs."
+      },
+      {
+        "start": 712.92,
+        "end": 734.12,
+        "text": "But you can still parameterize them because you might want to, I don't know, allow somebody to have a custom logo on the shirt, or they want to be able to put a message. So, personalization. Basically, I was just describing this set of tools and parameters for describing most of the websites I had to build so I could charge as much money without doing as much work."
+      },
+      {
+        "start": 734.96,
+        "end": 745.92,
+        "text": "It's not, well, you describe it as kind of like a hard problem, but today is kind of like a vibe coding experience, no? Well, that's well. So, I'm going to come right back to that in a little bit."
+      },
+      {
+        "start": 746.079,
+        "end": 757.54,
+        "text": "But I think that the thing that was interesting to me was: actually, let's go there now. I think that it's actually more relevant than ever because. Have you ever gone to a developer and asked them to code something?"
+      },
+      {
+        "start": 757.699,
+        "end": 769.44,
+        "text": "Like maybe you've got somebody you're working with and you're like, oh, could you just code me this? And then you look at what they build and you're like I should have been a little more specific because it is go build me an e-commerce site."
+      },
+      {
+        "start": 769.6,
+        "end": 787.6,
+        "text": "And you look at it, it's like, no, not that kind of e-commerce site. Yes. I can definitely relate to it. There's a people mind where learning to fine-tune exactly what you want to get done is an art. And so, what I'd argue then is, I'm going to argue that it's not the LLM's fault."
+      },
+      {
+        "start": 787.84,
+        "end": 813.46,
+        "text": "It's not that they hallucinate. It's just that we're simply insufficiently precise in our requirements. Now, that's not universally true. Sometimes we're incredibly precise and it just loses context because we put too much context in. There are a lot of things that can go wrong, but a big part of it, especially as the foundation models get more capable, is saying, firstly, How can we take big problems and decompose them into small problems?"
+      },
+      {
+        "start": 813.78,
+        "end": 832.04,
+        "text": "If I'm going to go to an application and say, I want a web application, like now. How about I say, here is my business context, here's my ICP for my audience, here's the competitive landscape, here is my voice and tone for the application, like the style, the vibe, here is the design."
+      },
+      {
+        "start": 832.14,
+        "end": 848.1,
+        "text": "Specs for it from a UI perspective. And then I would like you to work with me to describe user journeys, And then you iterate with the model on the user journeys. And once you agree with those, you're like, great, now what I want you to do is slice this into thinly sliced user stories."
+      },
+      {
+        "start": 848.42,
+        "end": 864.0,
+        "text": "Great. Once you iterate on that, then you put them into another tool to create formalized PRDs. And I would argue, going back to what I was doing 25 years ago, people have already started to talk about this possible world where maybe code becomes ephemeral."
+      },
+      {
+        "start": 864.24,
+        "end": 884.96,
+        "text": "Maybe we have another level of abstraction. It's possible, but not if you have a three-paragraph prompt. If you just say, go give me a Shopify Like website that allows me to sell baseball goods, that's not Sufficiently precise, detailed, and ambiguous to replace the code that it happens to generate."
+      },
+      {
+        "start": 886.339,
+        "end": 904.68,
+        "text": "But if we had a rich set of DSLs that described user authentication that described screens and workflows that described business objects with the Properties with the validation constraints, then permissioning, so which users can do what things to which properties on what objects."
+      },
+      {
+        "start": 905.0,
+        "end": 933.66,
+        "text": "Eventually, you could actually get to something that was not as complex or implementation specific as code, but that would allow you to unambiguously Regenerate that application in any arbitrary language or frameworks that met that functionality. And so my personal belief is that we're actually moving into a world where eventually we could find that the vast majority of code becomes ephemeral over three to eight years."
+      },
+      {
+        "start": 934.22,
+        "end": 960.98,
+        "text": "but only if you have sufficiently rigorous DSLs for becoming the true source of implementation and source of specification for both the acceptance tests and the implementation in a given language and framework. So essentially, you need to know very in detail what you want to get done even today with the different tools that are available out there for pipe coding and creating all the diagrams and so on."
+      },
+      {
+        "start": 961.18,
+        "end": 974.38,
+        "text": "And the one other thing is yes and no, because then what you do is you can then start to think about intelligent defaults. When we look at the fact that we Outsource material subsets of our applications now to SaaS vendors, right?"
+      },
+      {
+        "start": 974.62,
+        "end": 997.019,
+        "text": "I'm not going to build authentication. I'll use Auth0 or FusionAuth or one of the other tools for doing that. Great. What they do is effectively you can look at them as a concrete implementation of a set of configuration options and or DSLs for describing The universe of possible authentication systems you can build."
+      },
+      {
+        "start": 997.339,
+        "end": 1012.62,
+        "text": "Do you want to allow 2FA or require it? Are you going to Support text messaging for 2FA, or is this like so high value that that's insufficiently secure? Do you want to support magic links via email? Do you want to allow social logins?"
+      },
+      {
+        "start": 1012.699,
+        "end": 1024.939,
+        "text": "Do you want to allow Email and password login, or do you want to require a social login and which socials do you want to support? Well, for those subsets, there's stuff I care about for any given app, and there's stuff I don't."
+      },
+      {
+        "start": 1024.939,
+        "end": 1037.819,
+        "text": "So, maybe if I'm building a highly secure app, I'm going to spend, I'm going to configure every one of those possible options to say this is exactly how I want it secured. If I'm building, I don't know, a wedding registry website."
+      },
+      {
+        "start": 1038.019,
+        "end": 1060.26,
+        "text": "I don't care. I just give people a bunch of social logins. I don't need 2FA. And they just use good practices that you already know about user authentication. So given that, I see a future where we start to decouple these configurations and DSLs from their concrete implementations and say, actually And I don't want his ear."
+      },
+      {
+        "start": 1060.26,
+        "end": 1076.06,
+        "text": "They're great, but maybe you don't need auth zero. All you need is a way of specifying authentication. And then there can be multi either you can Vibe code an implementation that meets those requirements, and/or you can pick from one of multiple vendors."
+      },
+      {
+        "start": 1076.06,
+        "end": 1096.42,
+        "text": "that can plug and play, match to, and meet the requirements and the specifications you have for your particular user authentication. And then the nice thing is, now the amount of specification required for an application is as deep as you care about for any subset of the application."
+      },
+      {
+        "start": 1096.6,
+        "end": 1118.08,
+        "text": "So, if you deeply care about user authentication, yeah, you can have like 600 lines describing it in a very structured manner. If you don't care about Authentication at all, you're just going to have three default configuration settings. And the best part is if your spec is like, if my spec for user author for a simple site was just like, I don't know, I just want it to be fairly secure."
+      },
+      {
+        "start": 1118.3,
+        "end": 1139.74,
+        "text": "The implementation of fairly secure over the year would become more and more rich and would continue to keep up to date with past keys and new things automatically. Because you could simply say, well, I don't know, what is reasonably secure now, have a detailed standard prompt for that, and then either generate or integrate with a third party tool for doing that."
+      },
+      {
+        "start": 1139.74,
+        "end": 1176.419,
+        "text": "Okay, so if I understand correctly, it's essentially a system that enables different type of users, right, from wedding planners to people that need a more secure environment like in e-commerce and so on. to build their website in a way where they can use a DSL or describe or fill up a form that describe what exactly they need and kind of your system all the way and I'm sending people back all the way in 1996, 1997 is kind of automatically Builds that for the customer, right?"
+      },
+      {
+        "start": 1176.82,
+        "end": 1194.9,
+        "text": "Yeah. So I mean, I want to be realistic, going back and then forward. Back in 1999. I had a system. So my concrete implementation was as follows. This was back when You were using, you could use Perl still was a cool choice."
+      },
+      {
+        "start": 1195.22,
+        "end": 1208.58,
+        "text": "You could use ASP Classic, because I don't believe. NET had dropped till about 2000. Or you could use languages. I think PHP was about, and I was using one of my clients said, We're using this thing called Cold Fusion."
+      },
+      {
+        "start": 1208.9,
+        "end": 1224.02,
+        "text": "I'm like Sure, let's give it a go. And the fascinating thing is that by the time I stopped doing this, CodeFusion actually became the first dynamically typed language on the JVM. I'm a huge fan of Guillermoforge and Groovy."
+      },
+      {
+        "start": 1224.26,
+        "end": 1249.8,
+        "text": "I've been involved with that community for a while, but actually, ColdFusion was there first. And so within the CodeFusion world, one of the things I liked about it is it was a dynamically typed language. And a little bit like Ruby, it was designed to make metaprogramming easy, even for people like me who's Are not very good with parentheses, so could never quite get their head around closure or common lisp or any of those."
+      },
+      {
+        "start": 1250.44,
+        "end": 1271.22,
+        "text": "And what it allowed you to do was, I literally had these. Base classes, I had like a base class, and then I had classes for user and for product and for content and all the rest. And what it would do is it would basically load at runtime an XML file that described, oh, these are the properties of a product and these are the properties of this and that."
+      },
+      {
+        "start": 1271.46,
+        "end": 1293.94,
+        "text": "I'd already run a script to automatically provision the database schema based upon What your properties were, and then it basically inferred, it basically used method missing. It said, well, if there's not a List method or list products or list products within a category method, then what it will do is it will use this base class method that does all that stuff."
+      },
+      {
+        "start": 1294.04,
+        "end": 1317.9,
+        "text": "What it allowed me to do was configure 95% of the application using basically DSLs. I used XML just because it was an easy way of implementing it back then. And then for the other 5%, if I'm like, oh, no, no, no, I want my product category list to be really different for this customer, I wrote a 20-line product category list file within the class file, and it just overrode it, didn't drop down to the method missing."
+      },
+      {
+        "start": 1318.06,
+        "end": 1341.2,
+        "text": "So I did have. Have 5% of custom code for the use cases that I'd like, yeah, nobody else is ever going to want this. But I was able to Quotes, regenerate the application. I was effectively able to do round-trip code generation because I was just interpreting these DSL files, these XML files at runtime, rather than actually generating thousands of lines of ColdFusion code."
+      },
+      {
+        "start": 1341.22,
+        "end": 1355.98,
+        "text": "That's brilliant. It's brilliant. It's a great way to automate a lot of the work and get things done and support many customers, I assume, at the same time. Well, you know, so that was the problem. I did a great job of building out the technology."
+      },
+      {
+        "start": 1356.139,
+        "end": 1366.919,
+        "text": "If only I'd got more customers, I would probably be coming to you live from my yacht. As it is, I'm coming to you life from my garage. What you gonna do? Hey, it's you know, sometimes you need the right time."
+      },
+      {
+        "start": 1367.159,
+        "end": 1380.419,
+        "text": "I think the web took off only in the 2000s, right? So well, I mean, I still whether it was like Gopher and a bunch of other stuff. I'm going to get my timeline wrong. So I know everyone's going to like comment, like, dude, what do you think about it?"
+      },
+      {
+        "start": 1380.5,
+        "end": 1392.6,
+        "text": "But I think like, I remember ninety four. I feel like there were ways of interacting with stuff in maybe 93. But when was the first I think first browser was like 94, 95, it really started to become a thing."
+      },
+      {
+        "start": 1392.76,
+        "end": 1413.94,
+        "text": "96, 97 was when I got a bunch of companies coming in saying, Here's twenty thousand bucks. Go go build me a website. Interesting. Today it's like here, twenty million. I go do some AI agent. So, I guess, what are some of the learnings that you took from that experience?"
+      },
+      {
+        "start": 1414.4,
+        "end": 1430.6,
+        "text": "So that's a great question. Well, just very briefly, to take it from a business perspective, focus more on sales than technology. Otherwise, I would have probably done much better financially. But I just loved getting. Geeking out about the DSLs."
+      },
+      {
+        "start": 1430.919,
+        "end": 1445.5,
+        "text": "I think the biggest takeaway for me now, especially when I see, I still remember I was at a There was like a hacker house in Beat Up is a bunch of folks from one of these kind of research science hacker houses in the Bay Area came to New York a year or two ago."
+      },
+      {
+        "start": 1445.82,
+        "end": 1458.28,
+        "text": "And I still remember being like mortified because I I thought I was pretty cool. Like I knew I couldn't keep up with a bunch of, you know, ML researchers. I taught data science at Columbia Business School. Like, but I'm not, I'm not all that."
+      },
+      {
+        "start": 1459.24,
+        "end": 1469.54,
+        "text": "And I still I was so excited though, because I'd read a paper like a week. Before I'm like, I got it. I'm just gonna like drop that one paper. So I, you know, I referenced whatever the paper was I'd read."
+      },
+      {
+        "start": 1470.18,
+        "end": 1481.9,
+        "text": "Everyone looked at me like Where did you come from? It's like, didn't you see the like three updates in the last 36 hours? Like, you're like a week behind the times. Like, what are you even talking about here?"
+      },
+      {
+        "start": 1482.46,
+        "end": 1512.24,
+        "text": "So, um Given that there are these amazingly smart people who are building our future, the one thing I'd say is that it's worth looking for prior art. I look at so many problems around fundamentally, one of the problems we're trying to solve is the ability to Unambiguously and precisely specify our requirements in a way that doesn't require code."
+      },
+      {
+        "start": 1512.4,
+        "end": 1528.46,
+        "text": "The code's great, but that should eventually become ephemeral so that, hey, you get a better model or you want to You need suddenly you get new non-functional requirements. Oh, this needs to perform better, so we're going to regenerate it in Rust versus in Python or TypeScript or whatever it was running in initially."
+      },
+      {
+        "start": 1528.96,
+        "end": 1542.32,
+        "text": "And if we want to do that, I think the I would I used to present there was a code generation conference in Cambridge. I got to present at like Oopsler, which was a conference about like what do they call them, software product lines and code generation."
+      },
+      {
+        "start": 1542.48,
+        "end": 1562.18,
+        "text": "So The biggest takeaway is look for the prior art. Turns out the history rhymes, and sometimes you can get inspiration and insights from something, even if it's decades old. Thank you. Thank you so much. Yeah, it's a great summary for that this learning."
+      },
+      {
+        "start": 1562.26,
+        "end": 1576.1,
+        "text": "I always feel like with the new generation of NLP and models and everything that we do. At the end of the day, we need to know what we want to do and what we want to get done and have the language to explain that in plain English if we can."
+      },
+      {
+        "start": 1576.78,
+        "end": 1592.16,
+        "text": "and then translate it to all the the other systems. Peter, thank you, thank you, thank you. It was fascinating. Thank you so much for taking the time. I have always been a fan. I've always been like, one day I will get to speak with you."
+      },
+      {
+        "start": 1592.24,
+        "end": 1613.1,
+        "text": "And I'm glad I finally did. So thank you for taking the time. This was a delight. Oh, the pleasure is all mine. There's going to be the website in the comments. So please, please, please follow up with the comments so you can tap into Peter's brain through his magnificent book that he's writing. and all the cool new updates about his new company and new CTO communities."
+      },
+      {
+        "start": 1613.42,
+        "end": 1616.3,
+        "text": "And again, thank you so much and see you soon."
+      }
+    ]
+  },
+  "summary": {
+    "schema": "youtube-transcript-share/summary/v1",
+    "video_id": "VqaexziMnRw",
+    "model": "claude:sonnet",
+    "generated_at": "2026-10-07T18:51:59Z",
+    "one_liner": "Veteran engineer Peter Bell discusses scaling AI in engineering, his CTO community gather.dev, and how DSLs could make code ephemeral.",
+    "summary": "Adi Polak interviews Peter Bell, a veteran engineer, founder, and educator with over thirty years in software. Bell talks about his two current projects: gather.dev, an invite-only peer community for CTOs and engineering leaders, and a new O'Reilly book called \"Scaling AI in Engineering,\" which focuses on the non-technical, change-management side of AI adoption, like managing teams who fear their jobs will be eliminated or transformed.\n\nBell traces his career back to a teenage job as an electronics lab technician and then to running a web agency in the 1990s, where he got tired of manually coding similar websites and built a system of domain-specific languages (DSLs) to describe common patterns like authentication, content management, and e-commerce product variants. This let him rapidly configure 95% of an application and hand-write only the remaining custom 5%, effectively doing round-trip code generation decades before modern AI tools.\n\nHe connects this history directly to today's \"vibe coding\" debate, arguing that AI failures are usually not the LLM's fault but a result of imprecise requirements. He envisions a future where rich, structured DSLs and intelligent defaults let teams specify applications unambiguously enough that the underlying code becomes ephemeral and regenerable in any language or framework, while still allowing deep configuration wherever it truly matters.\n\nThe conversation closes with Bell's reflections on business lessons, mainly that he focused too much on technology and not enough on sales, and his advice to always look for prior art, since many of today's AI-era problems rhyme with ideas from decades past.",
+    "takeaways": [
+      "Bell is writing an O'Reilly book, 'Scaling AI in Engineering,' focused on the change-management and alignment challenges of AI adoption rather than technical implementation.",
+      "He founded gather.dev, a free, invite-only community for CTOs and engineering leaders to connect with close peers.",
+      "In the late 1990s, Bell built DSL-driven systems to configure websites (authentication, e-commerce, content management) instead of hand-coding each one.",
+      "He argues that most AI/LLM failures stem from insufficiently precise requirements, not from the models themselves hallucinating.",
+      "His vision is that code could become largely ephemeral within three to eight years if rich DSLs and intelligent defaults can unambiguously specify application behavior.",
+      "Authentication providers like Auth0 are examples of concrete implementations of a broader space of configuration options that could eventually be described more abstractly via DSLs.",
+      "His original ColdFusion-based system used XML DSLs and 'method missing' patterns to auto-generate 95% of an application, with custom code only for the remaining 5%.",
+      "A key business lesson from his agency days was that he underinvested in sales relative to technology, limiting his financial success despite strong technical execution.",
+      "He advises looking for prior art, since many problems being solved with modern AI echo ideas from decades-old code generation and software product line research."
+    ],
+    "chapters": [
+      {
+        "start": 0.0,
+        "title": "Cold open and teasers",
+        "summary": "Quick teaser clips introduce themes of the episode, including job disruption and precise AI requirements."
+      },
+      {
+        "start": 45.0,
+        "title": "Introducing Peter Bell",
+        "summary": "Host Adi Polak introduces Confluent Developer and guest Peter Bell, a veteran engineer and educator."
+      },
+      {
+        "start": 159.0,
+        "title": "gather.dev and the new O'Reilly book",
+        "summary": "Bell describes founding gather.dev for CTOs and writing an O'Reilly book on scaling AI in engineering leadership."
+      },
+      {
+        "start": 391.0,
+        "title": "First job: electronics lab technician",
+        "summary": "Bell recalls working as a teenage lab technician to save for a motorcycle and being inspired by an unconventional electronics teacher."
+      },
+      {
+        "start": 575.0,
+        "title": "Building DSL-driven websites in the 1990s",
+        "summary": "Running an ad agency, Bell got tired of repetitive HTML coding and built domain-specific languages to configure websites instead."
+      },
+      {
+        "start": 787.0,
+        "title": "Precision over hallucination",
+        "summary": "Bell argues AI failures are usually due to imprecise requirements rather than LLM hallucination, drawing a parallel to vibe coding."
+      },
+      {
+        "start": 934.0,
+        "title": "Toward ephemeral code and intelligent defaults",
+        "summary": "Bell outlines a future where rich DSLs and configurable defaults let teams specify apps precisely enough that code itself becomes regenerable and disposable."
+      },
+      {
+        "start": 1195.0,
+        "title": "The ColdFusion implementation",
+        "summary": "Bell details his old system using ColdFusion, XML DSLs, and method-missing patterns to auto-generate most of an application's code."
+      },
+      {
+        "start": 1356.0,
+        "title": "Business lesson: sales over technology",
+        "summary": "Bell admits he focused too much on building technology and not enough on sales, limiting the venture's financial success."
+      },
+      {
+        "start": 1482.0,
+        "title": "Advice: look for prior art",
+        "summary": "Bell encourages engineers to study decades-old work, since many current AI-era problems echo earlier code generation research."
+      },
+      {
+        "start": 1562.0,
+        "title": "Closing thoughts",
+        "summary": "Polak thanks Bell and points listeners to gather.dev for updates on his book and community."
+      }
+    ],
+    "quotes": [
+      {
+        "start": 211.54,
+        "text": "wait a minute, you've got 400 people. Working for you. And they know that their job's either going to be eliminated or transformed.",
+        "speaker": "Peter Bell"
+      },
+      {
+        "start": 787.84,
+        "text": "It's just that we're simply insufficiently precise in our requirements.",
+        "speaker": "Peter Bell"
+      },
+      {
+        "start": 1356.0,
+        "text": "You know, so that was the problem. I did a great job of building out the technology. If only I'd got more customers, I would probably be coming to you live from my yacht.",
+        "speaker": "Peter Bell"
+      },
+      {
+        "start": 1470.18,
+        "text": "Everyone looked at me like Where did you come from? It's like, didn't you see the like three updates in the last 36 hours?",
+        "speaker": "Peter Bell"
+      },
+      {
+        "start": 1482.46,
+        "text": "I look at so many problems around fundamentally, one of the problems we're trying to solve is the ability to Unambiguously and precisely specify our requirements in a way that doesn't require code.",
+        "speaker": "Peter Bell"
+      }
+    ],
+    "topics": [
+      "AI engineering leadership",
+      "domain-specific languages",
+      "code generation",
+      "vibe coding",
+      "CTO community",
+      "software history",
+      "change management",
+      "ephemeral code"
+    ]
+  }
+}

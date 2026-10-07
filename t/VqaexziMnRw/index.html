@@ -1,0 +1,672 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Scaling AI in Engineering with Peter Bell | Ep. 7 | Confluent Developer Podcast · Transcripts</title>
+  <meta name="description" content="Veteran engineer Peter Bell discusses scaling AI in engineering, his CTO community gather.dev, and how DSLs could make code ephemeral.">
+  <link rel="canonical" href="https://peterbell.github.io/gather-transcripts/t/VqaexziMnRw/">
+  <meta property="og:title" content="Scaling AI in Engineering with Peter Bell | Ep. 7 | Confluent Developer Podcast">
+  <meta property="og:description" content="Veteran engineer Peter Bell discusses scaling AI in engineering, his CTO community gather.dev, and how DSLs could make code ephemeral.">
+  <meta property="og:image" content="https://i.ytimg.com/vi/VqaexziMnRw/maxresdefault.jpg">
+  <meta property="og:image:alt" content="Thumbnail for Scaling AI in Engineering with Peter Bell | Ep. 7 | Confluent Developer Podcast">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://peterbell.github.io/gather-transcripts/t/VqaexziMnRw/">
+  <meta property="og:site_name" content="Transcripts">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <script defer src="../../assets/page.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Scaling AI in Engineering with Peter Bell | Ep. 7 | Confluent Developer Podcast",
+    "description": "Listen: https://confluent.buzzsprout.com | Today, Adi Polak talks to her guest, Peter Bell (gather.dev), about his career in software engineering leadership, CTO community building, and AI-driven development. Peter\u2019s first job: electronics lab technician at their school (alongside shifts at Tesco). His challenge/theme: working at scale with AI adoption and change management.\n\nCheck out gather.dev: https://www.gather.dev/\n\ud83c\udfa7 Subscribe to Confluent Developer wherever you listen to podcasts: https://confluent.buzzsprout.com\n\u25b6\ufe0f Subscribe on YouTube, and hit the \ud83d\udd14 to catch new episodes: https://youtube.com/@ConfluentDeveloper?sub_confirmation=1\n\ud83d\udc4d If you enjoyed this, please like it and leave us a comment\n\ud83c\udfa7 Confluent also has a podcast for tech leaders: \"Life Is But A Stream\" hosted by our friend, Joseph Morais: https://www.confluent.io/life-is-but-a-stream-show\n\nCREDITS\nHosted by Tim Berglund, Adi Polak and Viktor Gamov\nProduced and Edited by Noelle Gallagher, Peter Furia and Nurie Mohamed\nMusic by Coastal Kites\nArtwork by Phil Vo\n\nABOUT THE PODCAST \nHi, we\u2019re Tim Berglund, Adi Polak, and Viktor Gamov and we\u2019re excited to bring you the Confluent Developer podcast (formerly \u201cStreaming Audio.\u201d) Our hand-crafted weekly episodes feature in-depth interviews with our community of software developers (actual human beings - not AI) talking about some of the most interesting challenges they\u2019ve faced in their careers. We aim to explore the conditions that gave rise to each person\u2019s technical hurdles, as well as how their experiences transformed their understanding and approach to building systems. \n\nWhether you\u2019re a seasoned open source data streaming engineer, or just someone who\u2019s interested in learning more about Apache Kafka\u00ae,  Apache Flink\u00ae and real-time data, we hope you\u2019ll appreciate the stories, the discussion, and our effort to bring you a high-quality show worth your time.\n\nABOUT CONFLUENT DEVELOPER\nConfluent Developer provides comprehensive resources for developers looking to learn about Apache Kafka\u00ae, Apache Flink\u00ae, Confluent Cloud, Confluent Platform, and any other technology related to the broader Data Streaming Platform. Content on Confluent Developer includes courses, getting started guides, topical deep-dives, patterns, tutorials, and listings of community events. Learn more at https://developer.confluent.io. \n\n#confluentdeveloper #podcast #confluent",
+    "thumbnailUrl": ["https://i.ytimg.com/vi/VqaexziMnRw/maxresdefault.jpg"],
+    "uploadDate": "2025-11-03",
+    "duration": "PT1636S",
+    "embedUrl": "https://www.youtube-nocookie.com/embed/VqaexziMnRw?enablejsapi=1",
+    "url": "https://www.youtube.com/watch?v=VqaexziMnRw"
+  }
+  </script>
+</head>
+<body data-canonical-url="https://peterbell.github.io/gather-transcripts/t/VqaexziMnRw/">
+  <a class="skip-link" href="#transcript">Skip to transcript</a>
+    <a class="skip-link" href="#summary">Skip to summary</a>
+
+  <header class="site-bar" role="banner">
+    <a href="../../">Transcripts</a>
+  </header>
+
+  <main class="page-shell">
+    <header class="hero">
+      <div class="hang">
+        <h1 lang="en-US">Scaling AI in Engineering with Peter Bell | Ep. 7 | Confluent Developer Podcast</h1>
+          <p class="dek">Veteran engineer Peter Bell discusses scaling AI in engineering, his CTO community gather.dev, and how DSLs could make code ephemeral.</p>
+        <p class="meta-line">
+            <a href="https://www.youtube.com/channel/UCmTK4CrCaDXpuZ-Evl5-b5Q">Confluent Developer</a>
+          <span>November 3, 2025</span>
+          <span>27m 16s</span>
+          <a href="https://www.youtube.com/watch?v=VqaexziMnRw">Watch on YouTube</a>
+        </p>
+        <p class="provenance">Transcript from the video&#39;s captions</p>
+      </div>
+    </header>
+
+    <aside class="watch-rail" aria-label="Video">
+      <div class="player-card">
+        <a class="player-facade" href="https://www.youtube.com/watch?v=VqaexziMnRw" data-video-id="VqaexziMnRw" data-embed-url="https://www.youtube-nocookie.com/embed/VqaexziMnRw?enablejsapi=1" data-title="Scaling AI in Engineering with Peter Bell | Ep. 7 | Confluent Developer Podcast" aria-label="Play Scaling AI in Engineering with Peter Bell | Ep. 7 | Confluent Developer Podcast">
+          <img src="https://i.ytimg.com/vi/VqaexziMnRw/maxresdefault.jpg" alt="" width="1280" height="720" loading="eager">
+          <span class="play-button" aria-hidden="true"></span>
+          <span class="play-label" hidden>Play video</span>
+        </a>
+      </div>
+      <button class="copy-control" type="button" hidden>Copy link</button>
+      <p class="copy-status sr" aria-live="polite"></p>
+        <details class="chapters-panel">
+          <summary>11 chapters</summary>
+          <nav aria-label="Chapters">
+            <ol role="list">
+                <li>
+                  <a class="chapter-row" href="#t-0" data-start="0.0" data-anchor="t-0">
+                    <span class="stamp">0:00</span>
+                    <span>Cold open and teasers</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="chapter-row" href="#t-29" data-start="45.0" data-anchor="t-29">
+                    <span class="stamp">0:45</span>
+                    <span>Introducing Peter Bell</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="chapter-row" href="#t-146" data-start="159.0" data-anchor="t-146">
+                    <span class="stamp">2:39</span>
+                    <span>gather.dev and the new O&#39;Reilly book</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="chapter-row" href="#t-371" data-start="391.0" data-anchor="t-371">
+                    <span class="stamp">6:31</span>
+                    <span>First job: electronics lab technician</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="chapter-row" href="#t-575" data-start="575.0" data-anchor="t-575">
+                    <span class="stamp">9:35</span>
+                    <span>Building DSL-driven websites in the 1990s</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="chapter-row" href="#t-769" data-start="787.0" data-anchor="t-769">
+                    <span class="stamp">13:07</span>
+                    <span>Precision over hallucination</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="chapter-row" href="#t-934" data-start="934.0" data-anchor="t-934">
+                    <span class="stamp">15:34</span>
+                    <span>Toward ephemeral code and intelligent defaults</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="chapter-row" href="#t-1195" data-start="1195.0" data-anchor="t-1195">
+                    <span class="stamp">19:55</span>
+                    <span>The ColdFusion implementation</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="chapter-row" href="#t-1356" data-start="1356.0" data-anchor="t-1356">
+                    <span class="stamp">22:36</span>
+                    <span>Business lesson: sales over technology</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="chapter-row" href="#t-1482" data-start="1482.0" data-anchor="t-1482">
+                    <span class="stamp">24:42</span>
+                    <span>Advice: look for prior art</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="chapter-row" href="#t-1542" data-start="1562.0" data-anchor="t-1542">
+                    <span class="stamp">26:02</span>
+                    <span>Closing thoughts</span>
+                  </a>
+                </li>
+            </ol>
+          </nav>
+        </details>
+    </aside>
+
+    <div class="reading">
+        <section id="summary" class="summary-card hang" aria-labelledby="summary-title">
+          <h2 id="summary-title">Summary</h2>
+          <div class="summary-html"><p>Adi Polak interviews Peter Bell, a veteran engineer, founder, and educator with over thirty years in software. Bell talks about his two current projects: gather.dev, an invite-only peer community for CTOs and engineering leaders, and a new O'Reilly book called &quot;Scaling AI in Engineering,&quot; which focuses on the non-technical, change-management side of AI adoption, like managing teams who fear their jobs will be eliminated or transformed.</p>
+<p>Bell traces his career back to a teenage job as an electronics lab technician and then to running a web agency in the 1990s, where he got tired of manually coding similar websites and built a system of domain-specific languages (DSLs) to describe common patterns like authentication, content management, and e-commerce product variants. This let him rapidly configure 95% of an application and hand-write only the remaining custom 5%, effectively doing round-trip code generation decades before modern AI tools.</p>
+<p>He connects this history directly to today's &quot;vibe coding&quot; debate, arguing that AI failures are usually not the LLM's fault but a result of imprecise requirements. He envisions a future where rich, structured DSLs and intelligent defaults let teams specify applications unambiguously enough that the underlying code becomes ephemeral and regenerable in any language or framework, while still allowing deep configuration wherever it truly matters.</p>
+<p>The conversation closes with Bell's reflections on business lessons, mainly that he focused too much on technology and not enough on sales, and his advice to always look for prior art, since many of today's AI-era problems rhyme with ideas from decades past.</p>
+</div>
+            <h3>Takeaways</h3>
+            <ul>
+                <li>Bell is writing an O&#39;Reilly book, &#39;Scaling AI in Engineering,&#39; focused on the change-management and alignment challenges of AI adoption rather than technical implementation.</li>
+                <li>He founded gather.dev, a free, invite-only community for CTOs and engineering leaders to connect with close peers.</li>
+                <li>In the late 1990s, Bell built DSL-driven systems to configure websites (authentication, e-commerce, content management) instead of hand-coding each one.</li>
+                <li>He argues that most AI/LLM failures stem from insufficiently precise requirements, not from the models themselves hallucinating.</li>
+                <li>His vision is that code could become largely ephemeral within three to eight years if rich DSLs and intelligent defaults can unambiguously specify application behavior.</li>
+                <li>Authentication providers like Auth0 are examples of concrete implementations of a broader space of configuration options that could eventually be described more abstractly via DSLs.</li>
+                <li>His original ColdFusion-based system used XML DSLs and &#39;method missing&#39; patterns to auto-generate 95% of an application, with custom code only for the remaining 5%.</li>
+                <li>A key business lesson from his agency days was that he underinvested in sales relative to technology, limiting his financial success despite strong technical execution.</li>
+                <li>He advises looking for prior art, since many problems being solved with modern AI echo ideas from decades-old code generation and software product line research.</li>
+            </ul>
+          <p class="caption">Summary, takeaways, chapters, and the choice of quotes are by Claude, working from the transcript; every quote is checked word for word against it.</p>
+        </section>
+
+          <section class="quotes hang" aria-labelledby="quotes-title">
+            <h2 id="quotes-title">Quotes</h2>
+              <figure class="timed-line quote-line" id="quote-1">
+                <a class="stamp" href="#t-211" data-start="211.54">3:31</a>
+                <div><blockquote lang="en-US"><p>“wait a minute, you&#39;ve got 400 people. Working for you. And they know that their job&#39;s either going to be eliminated or transformed.”</p></blockquote><figcaption>Peter Bell</figcaption></div>
+              </figure>
+              <figure class="timed-line quote-line" id="quote-2">
+                <a class="stamp" href="#t-787" data-start="787.84">13:07</a>
+                <div><blockquote lang="en-US"><p>“It&#39;s just that we&#39;re simply insufficiently precise in our requirements.”</p></blockquote><figcaption>Peter Bell</figcaption></div>
+              </figure>
+              <figure class="timed-line quote-line" id="quote-3">
+                <a class="stamp" href="#t-1356" data-start="1356.0">22:36</a>
+                <div><blockquote lang="en-US"><p>“You know, so that was the problem. I did a great job of building out the technology. If only I&#39;d got more customers, I would probably be coming to you live from my yacht.”</p></blockquote><figcaption>Peter Bell</figcaption></div>
+              </figure>
+              <figure class="timed-line quote-line" id="quote-4">
+                <a class="stamp" href="#t-1470" data-start="1470.18">24:30</a>
+                <div><blockquote lang="en-US"><p>“Everyone looked at me like Where did you come from? It&#39;s like, didn&#39;t you see the like three updates in the last 36 hours?”</p></blockquote><figcaption>Peter Bell</figcaption></div>
+              </figure>
+              <figure class="timed-line quote-line" id="quote-5">
+                <a class="stamp" href="#t-1482" data-start="1482.46">24:42</a>
+                <div><blockquote lang="en-US"><p>“I look at so many problems around fundamentally, one of the problems we&#39;re trying to solve is the ability to Unambiguously and precisely specify our requirements in a way that doesn&#39;t require code.”</p></blockquote><figcaption>Peter Bell</figcaption></div>
+              </figure>
+          </section>
+
+      <section id="transcript" class="transcript" aria-labelledby="transcript-title">
+        <div class="transcript-head hang">
+          <h2 id="transcript-title">Transcript</h2>
+          <p class="download-inline">Download: <a href="./transcript.txt">Text</a> <a href="./transcript.md">Markdown</a> <a href="./transcript.json">JSON</a></p>
+        </div>
+        <div class="search-wrap hang" role="search" hidden>
+          <label class="sr" for="transcript-search">Search transcript</label>
+          <input id="transcript-search" type="search" autocomplete="off" placeholder="Search transcript">
+          <p id="search-status" aria-live="polite"></p>
+        </div>
+          <section class="transcript-section" id="ch-1" data-section>
+              <header class="chapter-heading timed-line">
+                <a class="stamp" href="#t-0" data-start="0.0">0:00</a>
+                <div>
+                  <h3>Cold open and teasers</h3>
+                  <p>Quick teaser clips introduce themes of the episode, including job disruption and precise AI requirements.</p>
+                </div>
+              </header>
+              <p id="t-0" class="timed-line transcript-line" data-paragraph data-start="0.001" data-end="14.559" lang="en-US">
+                <a class="stamp" href="#t-0" data-start="0.001">0:00</a>
+                <span>Today, we&#39;re diving into the art and science of building software that lasts. This is Confluent Developer. Wait a minute, you got 400 people working for you, and they know that their job&#39;s either going to be eliminated or transformed.</span>
+              </p>
+              <p id="t-14" class="timed-line transcript-line" data-paragraph data-start="14.88" data-end="29.64" lang="en-US">
+                <a class="stamp" href="#t-14" data-start="14.88">0:14</a>
+                <span>What do you say? I&#39;m going to argue that it&#39;s not the LLM&#39;s fault. It&#39;s not that they hallucinate, it&#39;s just that we&#39;re simply insufficiently. Precise in our requirements. You know, so that was the problem. I did a great job of building out the technology.</span>
+              </p>
+          </section>
+          <section class="transcript-section" id="ch-2" data-section>
+              <header class="chapter-heading timed-line">
+                <a class="stamp" href="#t-29" data-start="45.0">0:45</a>
+                <div>
+                  <h3>Introducing Peter Bell</h3>
+                  <p>Host Adi Polak introduces Confluent Developer and guest Peter Bell, a veteran engineer and educator.</p>
+                </div>
+              </header>
+              <p id="t-29" class="timed-line transcript-line" data-paragraph data-start="29.72" data-end="45.051" lang="en-US">
+                <a class="stamp" href="#t-29" data-start="29.72">0:29</a>
+                <span>If only I&#39;d got more customers, I would probably be coming to you live from my yacht. Hello there, everyone. I&#39;m Adi Polak, and welcome to Confluent Developer, where we explore the fascinating journeys of software developers tackling complex problems.</span>
+              </p>
+              <p id="t-45" class="timed-line transcript-line" data-paragraph data-start="45.051" data-end="69.383" lang="en-US">
+                <a class="stamp" href="#t-45" data-start="45.051">0:45</a>
+                <span>In this episode, I&#39;m interviewing Peter Bell, a veteran engineer, founder, educator and community builder with over three decades of experience shaping the future of software. From his early days soldering circuits boards and school labs to building CTO communities and writing a new book on scaling AI and engineering for O&#39;Reilly.</span>
+              </p>
+              <p id="t-69" class="timed-line transcript-line" data-paragraph data-start="69.383" data-end="93.94" lang="en-US">
+                <a class="stamp" href="#t-69" data-start="69.383">1:09</a>
+                <span>Peter shares a story of vision evolution and the relentless pursuit of clarity in how we build systems. His journey spans everything from pioneering early DSL driven web platforms in the nineties to exploring the future of where code itself becomes a FERMO. Replaced by precise specifications and intelligent defaults.</span>
+              </p>
+              <p id="t-94" class="timed-line transcript-line" data-paragraph data-start="94.26" data-end="126.751" lang="en-US">
+                <a class="stamp" href="#t-94" data-start="94.26">1:34</a>
+                <span>Let&#39;s get into it. Hello, everybody. Welcome back to Confluent Developer. I&#39;m super excited to have this special guest today with me. His name is Peter Bell, a veteran engineer, leader, founder, educator, community builder. with over thirty years of experience planning software engineering, developer advocacy, entrepreneurship, executive leadership, and a deep, deep understanding in systems and how to build them for success.</span>
+              </p>
+              <p id="t-126" class="timed-line transcript-line" data-paragraph data-start="126.751" data-end="146.56" lang="en-US">
+                <a class="stamp" href="#t-126" data-start="126.751">2:06</a>
+                <span>Peter, welcome. Wow. Well, thanks for making it really easy for me to live up to the billing. Now he&#39;s got to be an expert at everything. This better be a good episode. I mean, you are one of top leaders in our industry and super fortunate to have you on the show.</span>
+              </p>
+          </section>
+          <section class="transcript-section" id="ch-3" data-section>
+              <header class="chapter-heading timed-line">
+                <a class="stamp" href="#t-146" data-start="159.0">2:39</a>
+                <div>
+                  <h3>gather.dev and the new O&#39;Reilly book</h3>
+                  <p>Bell describes founding gather.dev for CTOs and writing an O&#39;Reilly book on scaling AI in engineering leadership.</p>
+                </div>
+              </header>
+              <p id="t-146" class="timed-line transcript-line" data-paragraph data-start="146.88" data-end="159.62" lang="en-US">
+                <a class="stamp" href="#t-146" data-start="146.88">2:26</a>
+                <span>Maybe you want to say a couple of words about yourself and some of the new cool stuff that you work on right now. Sure. So right now I&#39;m super excited about two things. The first is I&#39;ve just founded, I&#39;ve been threatening to do this for 15 years.</span>
+              </p>
+              <p id="t-159" class="timed-line transcript-line" data-paragraph data-start="159.7" data-end="175.66" lang="en-US">
+                <a class="stamp" href="#t-159" data-start="159.7">2:39</a>
+                <span>I&#39;ve been building CTO communities, monthly meetups, conferences. Finally founded gather.dev. And the goal is to create an invite-only brain trust for CTOs and other engineering leaders to connect with their very closest peers, whether that&#39;s CTOs at scale running large orgs.</span>
+              </p>
+              <p id="t-176" class="timed-line transcript-line" data-paragraph data-start="176.08" data-end="194.18" lang="en-US">
+                <a class="stamp" href="#t-176" data-start="176.08">2:56</a>
+                <span>venture back startups, CTOs or heads of AI. And the goal is to have in person monthly meetups in New York City, online communities and to scale from there. really so that you get people to understand exactly what you&#39;re dealing with and you can very quickly vet ideas or challenges that you&#39;re facing, and it&#39;s free and invite only.</span>
+              </p>
+              <p id="t-194" class="timed-line transcript-line" data-paragraph data-start="194.6" data-end="211.3" lang="en-US">
+                <a class="stamp" href="#t-194" data-start="194.6">3:14</a>
+                <span>And then the one other fun thing is, I am so excited. The O&#39;Reilly team, I get to host their CTO hour once a quarter, and they&#39;ve asked me to write a book called Scaling AI in Engineering. A leader&#39;s guide to driving alignment, adoption, and impact.</span>
+              </p>
+              <p id="t-211" class="timed-line transcript-line" data-paragraph data-start="211.54" data-end="228.3" lang="en-US">
+                <a class="stamp" href="#t-211" data-start="211.54">3:31</a>
+                <span>So it&#39;s all the non-technical stuff. It&#39;s not routers or how you manage your inference workloads or how you deal with any of that. It&#39;s like, wait a minute, you&#39;ve got 400 people. Working for you. And they know that their job&#39;s either going to be eliminated or transformed.</span>
+              </p>
+              <p id="t-228" class="timed-line transcript-line" data-paragraph data-start="228.86" data-end="238.34" lang="en-US">
+                <a class="stamp" href="#t-228" data-start="228.86">3:48</a>
+                <span>What do you say? Then you&#39;ve got a CEO who&#39;s like, so why aren&#39;t we doing 10 times the output with a 10th of the staff? Because I saw the case study. And so, you&#39;ve got to manage their expectations.</span>
+              </p>
+              <p id="t-238" class="timed-line transcript-line" data-paragraph data-start="238.5" data-end="254.78" lang="en-US">
+                <a class="stamp" href="#t-238" data-start="238.5">3:58</a>
+                <span>And how do you manage this what is fundamentally a change management problem? And I&#39;ve been interviewing a whole bunch of CTOs, and so that is it is going to be a fascinating book, and I&#39;m also going to have a companion website, which there&#39;ll be a link on the gather.</span>
+              </p>
+              <p id="t-254" class="timed-line transcript-line" data-paragraph data-start="254.94" data-end="269.98" lang="en-US">
+                <a class="stamp" href="#t-254" data-start="254.94">4:14</a>
+                <span>dev website if anyone wants to find it. It&#39;s amazing. It&#39;s definitely necessary. It&#39;s something that I always hear from different engineering leaders in this space. And also the fact that as an engineers, as leaders, we all need to kind of skill up, right?</span>
+              </p>
+              <p id="t-270" class="timed-line transcript-line" data-paragraph data-start="270.3" data-end="287.5" lang="en-US">
+                <a class="stamp" href="#t-270" data-start="270.3">4:30</a>
+                <span>This is the time to learn new things, embrace change and see how we can develop as human beings in this new space. of AI that we can continue having a a good successful, hopefully successful career. So super curious.</span>
+              </p>
+              <p id="t-287" class="timed-line transcript-line" data-paragraph data-start="287.84" data-end="305.26" lang="en-US">
+                <a class="stamp" href="#t-287" data-start="287.84">4:47</a>
+                <span>Yeah, super curious about your book. I&#39;m definitely going to be purchasing a copy. Do you have a date? I know this is a little bit stressful for book authors Oh no, it&#39;s the stressful was the fact that the first two chapters were due this morning, but I&#39;m like really close and they&#39;re being very flexible.</span>
+              </p>
+              <p id="t-305" class="timed-line transcript-line" data-paragraph data-start="305.42" data-end="318.66" lang="en-US">
+                <a class="stamp" href="#t-305" data-start="305.42">5:05</a>
+                <span>So by tomorrow, we&#39;ll have two chapters in. This will launch early next year, but I think what&#39;s going to be just as interesting. Is there is going to be a website. You&#39;ve got to give me a couple of days, but if you go to gather.</span>
+              </p>
+              <p id="t-318" class="timed-line transcript-line" data-paragraph data-start="318.82" data-end="341.2" lang="en-US">
+                <a class="stamp" href="#t-318" data-start="318.82">5:18</a>
+                <span>dev, you&#39;ll see a link called books that will get you there. And we&#39;re going to be dropping, starting end of October, we&#39;re going to drop weekly interviews with thought leaders and with CTOs from large companies. So there will be ongoing insights, advice, and information long before the book&#39;s available, and then it&#39;ll also be accessible on early release a little bit before it&#39;s published.</span>
+              </p>
+              <p id="t-341" class="timed-line transcript-line" data-paragraph data-start="341.36" data-end="359.36" lang="en-US">
+                <a class="stamp" href="#t-341" data-start="341.36">5:41</a>
+                <span>But the actual publication date should be early Q2 of next year. Fantastic. Okay, everybody, stay tuned for the website and the opportunity to learn from some of the greatest minds in the industry. It&#39;s cool, it&#39;s great. What I love about my job is basically I just interview people way smarter than me.</span>
+              </p>
+              <p id="t-359" class="timed-line transcript-line" data-paragraph data-start="359.68" data-end="371.12" lang="en-US">
+                <a class="stamp" href="#t-359" data-start="359.68">5:59</a>
+                <span>And then people are like, wow, that was a really smart conversation. And Peter was there. I guess he must be smart. It&#39;s the awesome life hack. If you&#39;re not really that smart, just interview people smarter than yourself. It works perfectly.</span>
+              </p>
+          </section>
+          <section class="transcript-section" id="ch-4" data-section>
+              <header class="chapter-heading timed-line">
+                <a class="stamp" href="#t-371" data-start="391.0">6:31</a>
+                <div>
+                  <h3>First job: electronics lab technician</h3>
+                  <p>Bell recalls working as a teenage lab technician to save for a motorcycle and being inspired by an unconventional electronics teacher.</p>
+                </div>
+              </header>
+              <p id="t-371" class="timed-line transcript-line" data-paragraph data-start="371.44" data-end="391.04" lang="en-US">
+                <a class="stamp" href="#t-371" data-start="371.44">6:11</a>
+                <span>That&#39;s the best advice. And you mentioned a job, so I want to take you back in time, maybe more probably more than thirty years back to your first job. What can you share with us? Wow. So I guess my very first job, I went to what they call in the UK a grammar school.</span>
+              </p>
+              <p id="t-391" class="timed-line transcript-line" data-paragraph data-start="391.12" data-end="402.139" lang="en-US">
+                <a class="stamp" href="#t-391" data-start="391.12">6:31</a>
+                <span>It would be like a magnet school in the States. You had to kind of pass a test to get there. But I. I really desperately wanted a motorcycle when I was 16. And my mom was like, Well, I&#39;m never getting you one of those.</span>
+              </p>
+              <p id="t-402" class="timed-line transcript-line" data-paragraph data-start="402.22" data-end="417.12" lang="en-US">
+                <a class="stamp" href="#t-402" data-start="402.22">6:42</a>
+                <span>I&#39;m like, Okay, so I got two jobs. I would work while I was going through high school, I&#39;d work about 16 hours a week at Tesco&#39;s. It would be like the local supermarket, just checking out and taking care of, you know, stocking the shelves and things like that.</span>
+              </p>
+              <p id="t-417" class="timed-line transcript-line" data-paragraph data-start="417.44" data-end="435.42" lang="en-US">
+                <a class="stamp" href="#t-417" data-start="417.44">6:57</a>
+                <span>And then I got this amazing job for eight hours a week as a lab technician. In the electronics lab at the school. So we were downloading to Terry Houd, like we were downloading like satellite feeds and information and you know, cleaning up the resistors and the transistors and the circuit boards and cleaning the soldering ions.</span>
+              </p>
+              <p id="t-435" class="timed-line transcript-line" data-paragraph data-start="435.74" data-end="454.52" lang="en-US">
+                <a class="stamp" href="#t-435" data-start="435.74">7:15</a>
+                <span>But it was an incredibly traditional school. It was a boys-only school, very kind of formal and traditional. Like it has some history going back close to 800 years. Cochester Royal Grammar School, and very formal. And then you&#39;ve got this wild shock of hair.</span>
+              </p>
+              <p id="t-454" class="timed-line transcript-line" data-paragraph data-start="454.639" data-end="474.28" lang="en-US">
+                <a class="stamp" href="#t-454" data-start="454.639">7:34</a>
+                <span>Electronics teacher called Mr. Warren, and he did maypole dancing, smoked pot after school. And was into herbal teas, which even that seemed weird back then. So he was just like this wonderful person to be around and see how he engaged with life in a non-traditional but still impactful way.</span>
+              </p>
+              <p id="t-474" class="timed-line transcript-line" data-paragraph data-start="474.52" data-end="491.7" lang="en-US">
+                <a class="stamp" href="#t-474" data-start="474.52">7:54</a>
+                <span>So it was great to hang out with him. I got to get really good at electronics, which was fun. Yeah, Mr. Warren World, that&#39;s a very interesting story. And also the fact that you remember him, speaks you know, it uh speaks loud to uh to the impact it had on you probably.</span>
+              </p>
+              <p id="t-491" class="timed-line transcript-line" data-paragraph data-start="491.86" data-end="510.94" lang="en-US">
+                <a class="stamp" href="#t-491" data-start="491.86">8:11</a>
+                <span>So, absolutely. It was great. Fantastic. Listen, it&#39;s super exciting. I&#39;m guessing you&#39;re not the only 16 year old guy that wanted a motorcycle. And had to work to get it. So I&#39;m sure a lot of people would can connect to that story.</span>
+              </p>
+              <p id="t-511" class="timed-line transcript-line" data-paragraph data-start="511.58" data-end="523.66" lang="en-US">
+                <a class="stamp" href="#t-511" data-start="511.58">8:31</a>
+                <span>I&#39;m curious. So jumping forward, right, you have a long successful career. You&#39;ve been doing a lot of things. Maybe you can take me back to some of the hardest challenges you had to solve and how did you go about that?</span>
+              </p>
+              <p id="t-523" class="timed-line transcript-line" data-paragraph data-start="523.98" data-end="543.74" lang="en-US">
+                <a class="stamp" href="#t-523" data-start="523.98">8:43</a>
+                <span>Now a quick word from our sponsor. Confluent Developer The Podcast is brought to you by Confluent Developer the website, which has everything you need as a developer of data streaming systems. And it&#39;s completely free. We&#39;ve got curriculum, hands-on exercises, executable tutorials, the online data streaming engineer certification, also free.</span>
+              </p>
+              <p id="t-544" class="timed-line transcript-line" data-paragraph data-start="544.06" data-end="559.22" lang="en-US">
+                <a class="stamp" href="#t-544" data-start="544.06">9:04</a>
+                <span>A way to find a meetup near you, those are free. Everything is there. Want you to be successful in your journey as a data streaming engineer, and this is the site that has what you need. Check it out at developer.confluent.io That&#39;s developer.</span>
+              </p>
+              <p id="t-559" class="timed-line transcript-line" data-paragraph data-start="559.46" data-end="574.06" lang="en-US">
+                <a class="stamp" href="#t-559" data-start="559.46">9:19</a>
+                <span>confluent. io. Now back to the show. So, I think one of the most interesting ones, and it&#39;s funny because it&#39;s a challenge that I started working on 25 years ago, and I feel like it&#39;s becoming just as relevant today.</span>
+              </p>
+          </section>
+          <section class="transcript-section" id="ch-5" data-section>
+              <header class="chapter-heading timed-line">
+                <a class="stamp" href="#t-575" data-start="575.0">9:35</a>
+                <div>
+                  <h3>Building DSL-driven websites in the 1990s</h3>
+                  <p>Running an ad agency, Bell got tired of repetitive HTML coding and built domain-specific languages to configure websites instead.</p>
+                </div>
+              </header>
+              <p id="t-575" class="timed-line transcript-line" data-paragraph data-start="575.04" data-end="605.1" lang="en-US">
+                <a class="stamp" href="#t-575" data-start="575.04">9:35</a>
+                <span>I I was I actually run an ad agency in Houston, Texas, and then the client started asking for Oh, we want to have a CD-ROM or we want one of these website things that people are talking about. I mean, this was back in 1994, I started this business. So by 1996, all these people were starting to ask for websites, and I was getting really sick and tired because I was basically just Manually coding the same HTML for a whole bunch of websites.</span>
+              </p>
+              <p id="t-605" class="timed-line transcript-line" data-paragraph data-start="605.18" data-end="621.18" lang="en-US">
+                <a class="stamp" href="#t-605" data-start="605.18">10:05</a>
+                <span>And I&#39;m like, that sucks. And so then I get to about 97, and I&#39;ve really fed up with this, and I start. Looking for patterns, like, how can I charge as much money but do less work? And what I noticed was, unsurprisingly, there was commonality.</span>
+              </p>
+              <p id="t-621" class="timed-line transcript-line" data-paragraph data-start="621.42" data-end="638.74" lang="en-US">
+                <a class="stamp" href="#t-621" data-start="621.42">10:21</a>
+                <span>Basically, I, who knew? I, I, um, Identified the Squarespace or I guess Shopify. I basically took that model and said, how can you create what then I modeled as a set of domain-specific languages So, DSLs for describing commonalities.</span>
+              </p>
+              <p id="t-638" class="timed-line transcript-line" data-paragraph data-start="638.98" data-end="656.86" lang="en-US">
+                <a class="stamp" href="#t-638" data-start="638.98">10:38</a>
+                <span>There are some things you don&#39;t care about. If you don&#39;t care about user authentication and login, great, it&#39;ll be a default flow. If you do care, Then we need to go a little further down, and there will be kind of like a decision, a set of questions we would ask you that would determine: oh, you want this kind of login or that kind, and these parameters around the password length, or no.</span>
+              </p>
+              <p id="t-657" class="timed-line transcript-line" data-paragraph data-start="657.1" data-end="671.42" lang="en-US">
+                <a class="stamp" href="#t-657" data-start="657.1">10:57</a>
+                <span>So you could get. As granular as you wanted. And then again, it had content management, e-commerce, because, like, you think about a product catalogue, right? You&#39;ve got a category tree, you&#39;ve got products, but then you have product variants that can.</span>
+              </p>
+              <p id="t-671" class="timed-line transcript-line" data-paragraph data-start="671.74" data-end="683.98" lang="en-US">
+                <a class="stamp" href="#t-671" data-start="671.74">11:11</a>
+                <span>Either be described, I could geek out just on this. It turns out that products are actually quite complicated. Some of them, you just have variants. So it&#39;s like I want to pick a color from a drop-down list and a size from a drop-down list.</span>
+              </p>
+              <p id="t-684" class="timed-line transcript-line" data-paragraph data-start="684.62" data-end="696.899" lang="en-US">
+                <a class="stamp" href="#t-684" data-start="684.62">11:24</a>
+                <span>Others, so that those are basically parametrizing your product. So you just have a single product, and then you&#39;d have two parameters, each of which was an arm, right? You could select one of n values for Whatever the combination amount was.</span>
+              </p>
+              <p id="t-697" class="timed-line transcript-line" data-paragraph data-start="697.22" data-end="712.92" lang="en-US">
+                <a class="stamp" href="#t-697" data-start="697.22">11:37</a>
+                <span>But then sometimes it&#39;s like, no, no, no, we actually don&#39;t do a medium in blue, we only do the medium in green and yellow. And we have skews and we have inventory quantities. And so then instead of parameterizing it, I had what I called back then subproducts, which was basically the individual SKUs.</span>
+              </p>
+              <p id="t-712" class="timed-line transcript-line" data-paragraph data-start="712.92" data-end="734.12" lang="en-US">
+                <a class="stamp" href="#t-712" data-start="712.92">11:52</a>
+                <span>But you can still parameterize them because you might want to, I don&#39;t know, allow somebody to have a custom logo on the shirt, or they want to be able to put a message. So, personalization. Basically, I was just describing this set of tools and parameters for describing most of the websites I had to build so I could charge as much money without doing as much work.</span>
+              </p>
+              <p id="t-734" class="timed-line transcript-line" data-paragraph data-start="734.96" data-end="745.92" lang="en-US">
+                <a class="stamp" href="#t-734" data-start="734.96">12:14</a>
+                <span>It&#39;s not, well, you describe it as kind of like a hard problem, but today is kind of like a vibe coding experience, no? Well, that&#39;s well. So, I&#39;m going to come right back to that in a little bit.</span>
+              </p>
+              <p id="t-746" class="timed-line transcript-line" data-paragraph data-start="746.079" data-end="757.54" lang="en-US">
+                <a class="stamp" href="#t-746" data-start="746.079">12:26</a>
+                <span>But I think that the thing that was interesting to me was: actually, let&#39;s go there now. I think that it&#39;s actually more relevant than ever because. Have you ever gone to a developer and asked them to code something?</span>
+              </p>
+              <p id="t-757" class="timed-line transcript-line" data-paragraph data-start="757.699" data-end="769.44" lang="en-US">
+                <a class="stamp" href="#t-757" data-start="757.699">12:37</a>
+                <span>Like maybe you&#39;ve got somebody you&#39;re working with and you&#39;re like, oh, could you just code me this? And then you look at what they build and you&#39;re like I should have been a little more specific because it is go build me an e-commerce site.</span>
+              </p>
+          </section>
+          <section class="transcript-section" id="ch-6" data-section>
+              <header class="chapter-heading timed-line">
+                <a class="stamp" href="#t-769" data-start="787.0">13:07</a>
+                <div>
+                  <h3>Precision over hallucination</h3>
+                  <p>Bell argues AI failures are usually due to imprecise requirements rather than LLM hallucination, drawing a parallel to vibe coding.</p>
+                </div>
+              </header>
+              <p id="t-769" class="timed-line transcript-line" data-paragraph data-start="769.6" data-end="787.6" lang="en-US">
+                <a class="stamp" href="#t-769" data-start="769.6">12:49</a>
+                <span>And you look at it, it&#39;s like, no, not that kind of e-commerce site. Yes. I can definitely relate to it. There&#39;s a people mind where learning to fine-tune exactly what you want to get done is an art. And so, what I&#39;d argue then is, I&#39;m going to argue that it&#39;s not the LLM&#39;s fault.</span>
+              </p>
+              <p id="t-787" class="timed-line transcript-line" data-paragraph data-start="787.84" data-end="813.46" lang="en-US">
+                <a class="stamp" href="#t-787" data-start="787.84">13:07</a>
+                <span>It&#39;s not that they hallucinate. It&#39;s just that we&#39;re simply insufficiently precise in our requirements. Now, that&#39;s not universally true. Sometimes we&#39;re incredibly precise and it just loses context because we put too much context in. There are a lot of things that can go wrong, but a big part of it, especially as the foundation models get more capable, is saying, firstly, How can we take big problems and decompose them into small problems?</span>
+              </p>
+              <p id="t-813" class="timed-line transcript-line" data-paragraph data-start="813.78" data-end="832.04" lang="en-US">
+                <a class="stamp" href="#t-813" data-start="813.78">13:33</a>
+                <span>If I&#39;m going to go to an application and say, I want a web application, like now. How about I say, here is my business context, here&#39;s my ICP for my audience, here&#39;s the competitive landscape, here is my voice and tone for the application, like the style, the vibe, here is the design.</span>
+              </p>
+              <p id="t-832" class="timed-line transcript-line" data-paragraph data-start="832.14" data-end="848.1" lang="en-US">
+                <a class="stamp" href="#t-832" data-start="832.14">13:52</a>
+                <span>Specs for it from a UI perspective. And then I would like you to work with me to describe user journeys, And then you iterate with the model on the user journeys. And once you agree with those, you&#39;re like, great, now what I want you to do is slice this into thinly sliced user stories.</span>
+              </p>
+              <p id="t-848" class="timed-line transcript-line" data-paragraph data-start="848.42" data-end="864.0" lang="en-US">
+                <a class="stamp" href="#t-848" data-start="848.42">14:08</a>
+                <span>Great. Once you iterate on that, then you put them into another tool to create formalized PRDs. And I would argue, going back to what I was doing 25 years ago, people have already started to talk about this possible world where maybe code becomes ephemeral.</span>
+              </p>
+              <p id="t-864" class="timed-line transcript-line" data-paragraph data-start="864.24" data-end="884.96" lang="en-US">
+                <a class="stamp" href="#t-864" data-start="864.24">14:24</a>
+                <span>Maybe we have another level of abstraction. It&#39;s possible, but not if you have a three-paragraph prompt. If you just say, go give me a Shopify Like website that allows me to sell baseball goods, that&#39;s not Sufficiently precise, detailed, and ambiguous to replace the code that it happens to generate.</span>
+              </p>
+              <p id="t-886" class="timed-line transcript-line" data-paragraph data-start="886.339" data-end="904.68" lang="en-US">
+                <a class="stamp" href="#t-886" data-start="886.339">14:46</a>
+                <span>But if we had a rich set of DSLs that described user authentication that described screens and workflows that described business objects with the Properties with the validation constraints, then permissioning, so which users can do what things to which properties on what objects.</span>
+              </p>
+              <p id="t-905" class="timed-line transcript-line" data-paragraph data-start="905.0" data-end="933.66" lang="en-US">
+                <a class="stamp" href="#t-905" data-start="905.0">15:05</a>
+                <span>Eventually, you could actually get to something that was not as complex or implementation specific as code, but that would allow you to unambiguously Regenerate that application in any arbitrary language or frameworks that met that functionality. And so my personal belief is that we&#39;re actually moving into a world where eventually we could find that the vast majority of code becomes ephemeral over three to eight years.</span>
+              </p>
+          </section>
+          <section class="transcript-section" id="ch-7" data-section>
+              <header class="chapter-heading timed-line">
+                <a class="stamp" href="#t-934" data-start="934.0">15:34</a>
+                <div>
+                  <h3>Toward ephemeral code and intelligent defaults</h3>
+                  <p>Bell outlines a future where rich DSLs and configurable defaults let teams specify apps precisely enough that code itself becomes regenerable and disposable.</p>
+                </div>
+              </header>
+              <p id="t-934" class="timed-line transcript-line" data-paragraph data-start="934.22" data-end="960.98" lang="en-US">
+                <a class="stamp" href="#t-934" data-start="934.22">15:34</a>
+                <span>but only if you have sufficiently rigorous DSLs for becoming the true source of implementation and source of specification for both the acceptance tests and the implementation in a given language and framework. So essentially, you need to know very in detail what you want to get done even today with the different tools that are available out there for pipe coding and creating all the diagrams and so on.</span>
+              </p>
+              <p id="t-961" class="timed-line transcript-line" data-paragraph data-start="961.18" data-end="974.38" lang="en-US">
+                <a class="stamp" href="#t-961" data-start="961.18">16:01</a>
+                <span>And the one other thing is yes and no, because then what you do is you can then start to think about intelligent defaults. When we look at the fact that we Outsource material subsets of our applications now to SaaS vendors, right?</span>
+              </p>
+              <p id="t-974" class="timed-line transcript-line" data-paragraph data-start="974.62" data-end="997.019" lang="en-US">
+                <a class="stamp" href="#t-974" data-start="974.62">16:14</a>
+                <span>I&#39;m not going to build authentication. I&#39;ll use Auth0 or FusionAuth or one of the other tools for doing that. Great. What they do is effectively you can look at them as a concrete implementation of a set of configuration options and or DSLs for describing The universe of possible authentication systems you can build.</span>
+              </p>
+              <p id="t-997" class="timed-line transcript-line" data-paragraph data-start="997.339" data-end="1012.62" lang="en-US">
+                <a class="stamp" href="#t-997" data-start="997.339">16:37</a>
+                <span>Do you want to allow 2FA or require it? Are you going to Support text messaging for 2FA, or is this like so high value that that&#39;s insufficiently secure? Do you want to support magic links via email? Do you want to allow social logins?</span>
+              </p>
+              <p id="t-1012" class="timed-line transcript-line" data-paragraph data-start="1012.699" data-end="1024.939" lang="en-US">
+                <a class="stamp" href="#t-1012" data-start="1012.699">16:52</a>
+                <span>Do you want to allow Email and password login, or do you want to require a social login and which socials do you want to support? Well, for those subsets, there&#39;s stuff I care about for any given app, and there&#39;s stuff I don&#39;t.</span>
+              </p>
+              <p id="t-1024" class="timed-line transcript-line" data-paragraph data-start="1024.939" data-end="1037.819" lang="en-US">
+                <a class="stamp" href="#t-1024" data-start="1024.939">17:04</a>
+                <span>So, maybe if I&#39;m building a highly secure app, I&#39;m going to spend, I&#39;m going to configure every one of those possible options to say this is exactly how I want it secured. If I&#39;m building, I don&#39;t know, a wedding registry website.</span>
+              </p>
+              <p id="t-1038" class="timed-line transcript-line" data-paragraph data-start="1038.019" data-end="1060.26" lang="en-US">
+                <a class="stamp" href="#t-1038" data-start="1038.019">17:18</a>
+                <span>I don&#39;t care. I just give people a bunch of social logins. I don&#39;t need 2FA. And they just use good practices that you already know about user authentication. So given that, I see a future where we start to decouple these configurations and DSLs from their concrete implementations and say, actually And I don&#39;t want his ear.</span>
+              </p>
+              <p id="t-1060" class="timed-line transcript-line" data-paragraph data-start="1060.26" data-end="1076.06" lang="en-US">
+                <a class="stamp" href="#t-1060" data-start="1060.26">17:40</a>
+                <span>They&#39;re great, but maybe you don&#39;t need auth zero. All you need is a way of specifying authentication. And then there can be multi either you can Vibe code an implementation that meets those requirements, and/or you can pick from one of multiple vendors.</span>
+              </p>
+              <p id="t-1076" class="timed-line transcript-line" data-paragraph data-start="1076.06" data-end="1096.42" lang="en-US">
+                <a class="stamp" href="#t-1076" data-start="1076.06">17:56</a>
+                <span>that can plug and play, match to, and meet the requirements and the specifications you have for your particular user authentication. And then the nice thing is, now the amount of specification required for an application is as deep as you care about for any subset of the application.</span>
+              </p>
+              <p id="t-1096" class="timed-line transcript-line" data-paragraph data-start="1096.6" data-end="1118.08" lang="en-US">
+                <a class="stamp" href="#t-1096" data-start="1096.6">18:16</a>
+                <span>So, if you deeply care about user authentication, yeah, you can have like 600 lines describing it in a very structured manner. If you don&#39;t care about Authentication at all, you&#39;re just going to have three default configuration settings. And the best part is if your spec is like, if my spec for user author for a simple site was just like, I don&#39;t know, I just want it to be fairly secure.</span>
+              </p>
+              <p id="t-1118" class="timed-line transcript-line" data-paragraph data-start="1118.3" data-end="1139.74" lang="en-US">
+                <a class="stamp" href="#t-1118" data-start="1118.3">18:38</a>
+                <span>The implementation of fairly secure over the year would become more and more rich and would continue to keep up to date with past keys and new things automatically. Because you could simply say, well, I don&#39;t know, what is reasonably secure now, have a detailed standard prompt for that, and then either generate or integrate with a third party tool for doing that.</span>
+              </p>
+              <p id="t-1139" class="timed-line transcript-line" data-paragraph data-start="1139.74" data-end="1176.419" lang="en-US">
+                <a class="stamp" href="#t-1139" data-start="1139.74">18:59</a>
+                <span>Okay, so if I understand correctly, it&#39;s essentially a system that enables different type of users, right, from wedding planners to people that need a more secure environment like in e-commerce and so on. to build their website in a way where they can use a DSL or describe or fill up a form that describe what exactly they need and kind of your system all the way and I&#39;m sending people back all the way in 1996, 1997 is kind of automatically Builds that for the customer, right?</span>
+              </p>
+              <p id="t-1176" class="timed-line transcript-line" data-paragraph data-start="1176.82" data-end="1194.9" lang="en-US">
+                <a class="stamp" href="#t-1176" data-start="1176.82">19:36</a>
+                <span>Yeah. So I mean, I want to be realistic, going back and then forward. Back in 1999. I had a system. So my concrete implementation was as follows. This was back when You were using, you could use Perl still was a cool choice.</span>
+              </p>
+          </section>
+          <section class="transcript-section" id="ch-8" data-section>
+              <header class="chapter-heading timed-line">
+                <a class="stamp" href="#t-1195" data-start="1195.0">19:55</a>
+                <div>
+                  <h3>The ColdFusion implementation</h3>
+                  <p>Bell details his old system using ColdFusion, XML DSLs, and method-missing patterns to auto-generate most of an application&#39;s code.</p>
+                </div>
+              </header>
+              <p id="t-1195" class="timed-line transcript-line" data-paragraph data-start="1195.22" data-end="1208.58" lang="en-US">
+                <a class="stamp" href="#t-1195" data-start="1195.22">19:55</a>
+                <span>You could use ASP Classic, because I don&#39;t believe. NET had dropped till about 2000. Or you could use languages. I think PHP was about, and I was using one of my clients said, We&#39;re using this thing called Cold Fusion.</span>
+              </p>
+              <p id="t-1208" class="timed-line transcript-line" data-paragraph data-start="1208.9" data-end="1224.02" lang="en-US">
+                <a class="stamp" href="#t-1208" data-start="1208.9">20:08</a>
+                <span>I&#39;m like Sure, let&#39;s give it a go. And the fascinating thing is that by the time I stopped doing this, CodeFusion actually became the first dynamically typed language on the JVM. I&#39;m a huge fan of Guillermoforge and Groovy.</span>
+              </p>
+              <p id="t-1224" class="timed-line transcript-line" data-paragraph data-start="1224.26" data-end="1249.8" lang="en-US">
+                <a class="stamp" href="#t-1224" data-start="1224.26">20:24</a>
+                <span>I&#39;ve been involved with that community for a while, but actually, ColdFusion was there first. And so within the CodeFusion world, one of the things I liked about it is it was a dynamically typed language. And a little bit like Ruby, it was designed to make metaprogramming easy, even for people like me who&#39;s Are not very good with parentheses, so could never quite get their head around closure or common lisp or any of those.</span>
+              </p>
+              <p id="t-1250" class="timed-line transcript-line" data-paragraph data-start="1250.44" data-end="1271.22" lang="en-US">
+                <a class="stamp" href="#t-1250" data-start="1250.44">20:50</a>
+                <span>And what it allowed you to do was, I literally had these. Base classes, I had like a base class, and then I had classes for user and for product and for content and all the rest. And what it would do is it would basically load at runtime an XML file that described, oh, these are the properties of a product and these are the properties of this and that.</span>
+              </p>
+              <p id="t-1271" class="timed-line transcript-line" data-paragraph data-start="1271.46" data-end="1293.94" lang="en-US">
+                <a class="stamp" href="#t-1271" data-start="1271.46">21:11</a>
+                <span>I&#39;d already run a script to automatically provision the database schema based upon What your properties were, and then it basically inferred, it basically used method missing. It said, well, if there&#39;s not a List method or list products or list products within a category method, then what it will do is it will use this base class method that does all that stuff.</span>
+              </p>
+              <p id="t-1294" class="timed-line transcript-line" data-paragraph data-start="1294.04" data-end="1317.9" lang="en-US">
+                <a class="stamp" href="#t-1294" data-start="1294.04">21:34</a>
+                <span>What it allowed me to do was configure 95% of the application using basically DSLs. I used XML just because it was an easy way of implementing it back then. And then for the other 5%, if I&#39;m like, oh, no, no, no, I want my product category list to be really different for this customer, I wrote a 20-line product category list file within the class file, and it just overrode it, didn&#39;t drop down to the method missing.</span>
+              </p>
+              <p id="t-1318" class="timed-line transcript-line" data-paragraph data-start="1318.06" data-end="1341.2" lang="en-US">
+                <a class="stamp" href="#t-1318" data-start="1318.06">21:58</a>
+                <span>So I did have. Have 5% of custom code for the use cases that I&#39;d like, yeah, nobody else is ever going to want this. But I was able to Quotes, regenerate the application. I was effectively able to do round-trip code generation because I was just interpreting these DSL files, these XML files at runtime, rather than actually generating thousands of lines of ColdFusion code.</span>
+              </p>
+              <p id="t-1341" class="timed-line transcript-line" data-paragraph data-start="1341.22" data-end="1355.98" lang="en-US">
+                <a class="stamp" href="#t-1341" data-start="1341.22">22:21</a>
+                <span>That&#39;s brilliant. It&#39;s brilliant. It&#39;s a great way to automate a lot of the work and get things done and support many customers, I assume, at the same time. Well, you know, so that was the problem. I did a great job of building out the technology.</span>
+              </p>
+          </section>
+          <section class="transcript-section" id="ch-9" data-section>
+              <header class="chapter-heading timed-line">
+                <a class="stamp" href="#t-1356" data-start="1356.0">22:36</a>
+                <div>
+                  <h3>Business lesson: sales over technology</h3>
+                  <p>Bell admits he focused too much on building technology and not enough on sales, limiting the venture&#39;s financial success.</p>
+                </div>
+              </header>
+              <p id="t-1356" class="timed-line transcript-line" data-paragraph data-start="1356.139" data-end="1366.919" lang="en-US">
+                <a class="stamp" href="#t-1356" data-start="1356.139">22:36</a>
+                <span>If only I&#39;d got more customers, I would probably be coming to you live from my yacht. As it is, I&#39;m coming to you life from my garage. What you gonna do? Hey, it&#39;s you know, sometimes you need the right time.</span>
+              </p>
+              <p id="t-1367" class="timed-line transcript-line" data-paragraph data-start="1367.159" data-end="1380.419" lang="en-US">
+                <a class="stamp" href="#t-1367" data-start="1367.159">22:47</a>
+                <span>I think the web took off only in the 2000s, right? So well, I mean, I still whether it was like Gopher and a bunch of other stuff. I&#39;m going to get my timeline wrong. So I know everyone&#39;s going to like comment, like, dude, what do you think about it?</span>
+              </p>
+              <p id="t-1380" class="timed-line transcript-line" data-paragraph data-start="1380.5" data-end="1392.6" lang="en-US">
+                <a class="stamp" href="#t-1380" data-start="1380.5">23:00</a>
+                <span>But I think like, I remember ninety four. I feel like there were ways of interacting with stuff in maybe 93. But when was the first I think first browser was like 94, 95, it really started to become a thing.</span>
+              </p>
+              <p id="t-1392" class="timed-line transcript-line" data-paragraph data-start="1392.76" data-end="1413.94" lang="en-US">
+                <a class="stamp" href="#t-1392" data-start="1392.76">23:12</a>
+                <span>96, 97 was when I got a bunch of companies coming in saying, Here&#39;s twenty thousand bucks. Go go build me a website. Interesting. Today it&#39;s like here, twenty million. I go do some AI agent. So, I guess, what are some of the learnings that you took from that experience?</span>
+              </p>
+              <p id="t-1414" class="timed-line transcript-line" data-paragraph data-start="1414.4" data-end="1430.6" lang="en-US">
+                <a class="stamp" href="#t-1414" data-start="1414.4">23:34</a>
+                <span>So that&#39;s a great question. Well, just very briefly, to take it from a business perspective, focus more on sales than technology. Otherwise, I would have probably done much better financially. But I just loved getting. Geeking out about the DSLs.</span>
+              </p>
+              <p id="t-1430" class="timed-line transcript-line" data-paragraph data-start="1430.919" data-end="1445.5" lang="en-US">
+                <a class="stamp" href="#t-1430" data-start="1430.919">23:50</a>
+                <span>I think the biggest takeaway for me now, especially when I see, I still remember I was at a There was like a hacker house in Beat Up is a bunch of folks from one of these kind of research science hacker houses in the Bay Area came to New York a year or two ago.</span>
+              </p>
+              <p id="t-1445" class="timed-line transcript-line" data-paragraph data-start="1445.82" data-end="1458.28" lang="en-US">
+                <a class="stamp" href="#t-1445" data-start="1445.82">24:05</a>
+                <span>And I still remember being like mortified because I I thought I was pretty cool. Like I knew I couldn&#39;t keep up with a bunch of, you know, ML researchers. I taught data science at Columbia Business School. Like, but I&#39;m not, I&#39;m not all that.</span>
+              </p>
+              <p id="t-1459" class="timed-line transcript-line" data-paragraph data-start="1459.24" data-end="1469.54" lang="en-US">
+                <a class="stamp" href="#t-1459" data-start="1459.24">24:19</a>
+                <span>And I still I was so excited though, because I&#39;d read a paper like a week. Before I&#39;m like, I got it. I&#39;m just gonna like drop that one paper. So I, you know, I referenced whatever the paper was I&#39;d read.</span>
+              </p>
+              <p id="t-1470" class="timed-line transcript-line" data-paragraph data-start="1470.18" data-end="1481.9" lang="en-US">
+                <a class="stamp" href="#t-1470" data-start="1470.18">24:30</a>
+                <span>Everyone looked at me like Where did you come from? It&#39;s like, didn&#39;t you see the like three updates in the last 36 hours? Like, you&#39;re like a week behind the times. Like, what are you even talking about here?</span>
+              </p>
+          </section>
+          <section class="transcript-section" id="ch-10" data-section>
+              <header class="chapter-heading timed-line">
+                <a class="stamp" href="#t-1482" data-start="1482.0">24:42</a>
+                <div>
+                  <h3>Advice: look for prior art</h3>
+                  <p>Bell encourages engineers to study decades-old work, since many current AI-era problems echo earlier code generation research.</p>
+                </div>
+              </header>
+              <p id="t-1482" class="timed-line transcript-line" data-paragraph data-start="1482.46" data-end="1512.24" lang="en-US">
+                <a class="stamp" href="#t-1482" data-start="1482.46">24:42</a>
+                <span>So, um Given that there are these amazingly smart people who are building our future, the one thing I&#39;d say is that it&#39;s worth looking for prior art. I look at so many problems around fundamentally, one of the problems we&#39;re trying to solve is the ability to Unambiguously and precisely specify our requirements in a way that doesn&#39;t require code.</span>
+              </p>
+              <p id="t-1512" class="timed-line transcript-line" data-paragraph data-start="1512.4" data-end="1528.46" lang="en-US">
+                <a class="stamp" href="#t-1512" data-start="1512.4">25:12</a>
+                <span>The code&#39;s great, but that should eventually become ephemeral so that, hey, you get a better model or you want to You need suddenly you get new non-functional requirements. Oh, this needs to perform better, so we&#39;re going to regenerate it in Rust versus in Python or TypeScript or whatever it was running in initially.</span>
+              </p>
+              <p id="t-1528" class="timed-line transcript-line" data-paragraph data-start="1528.96" data-end="1542.32" lang="en-US">
+                <a class="stamp" href="#t-1528" data-start="1528.96">25:28</a>
+                <span>And if we want to do that, I think the I would I used to present there was a code generation conference in Cambridge. I got to present at like Oopsler, which was a conference about like what do they call them, software product lines and code generation.</span>
+              </p>
+          </section>
+          <section class="transcript-section" id="ch-11" data-section>
+              <header class="chapter-heading timed-line">
+                <a class="stamp" href="#t-1542" data-start="1562.0">26:02</a>
+                <div>
+                  <h3>Closing thoughts</h3>
+                  <p>Polak thanks Bell and points listeners to gather.dev for updates on his book and community.</p>
+                </div>
+              </header>
+              <p id="t-1542" class="timed-line transcript-line" data-paragraph data-start="1542.48" data-end="1562.18" lang="en-US">
+                <a class="stamp" href="#t-1542" data-start="1542.48">25:42</a>
+                <span>So The biggest takeaway is look for the prior art. Turns out the history rhymes, and sometimes you can get inspiration and insights from something, even if it&#39;s decades old. Thank you. Thank you so much. Yeah, it&#39;s a great summary for that this learning.</span>
+              </p>
+              <p id="t-1562" class="timed-line transcript-line" data-paragraph data-start="1562.26" data-end="1576.1" lang="en-US">
+                <a class="stamp" href="#t-1562" data-start="1562.26">26:02</a>
+                <span>I always feel like with the new generation of NLP and models and everything that we do. At the end of the day, we need to know what we want to do and what we want to get done and have the language to explain that in plain English if we can.</span>
+              </p>
+              <p id="t-1576" class="timed-line transcript-line" data-paragraph data-start="1576.78" data-end="1592.16" lang="en-US">
+                <a class="stamp" href="#t-1576" data-start="1576.78">26:16</a>
+                <span>and then translate it to all the the other systems. Peter, thank you, thank you, thank you. It was fascinating. Thank you so much for taking the time. I have always been a fan. I&#39;ve always been like, one day I will get to speak with you.</span>
+              </p>
+              <p id="t-1592" class="timed-line transcript-line" data-paragraph data-start="1592.24" data-end="1613.1" lang="en-US">
+                <a class="stamp" href="#t-1592" data-start="1592.24">26:32</a>
+                <span>And I&#39;m glad I finally did. So thank you for taking the time. This was a delight. Oh, the pleasure is all mine. There&#39;s going to be the website in the comments. So please, please, please follow up with the comments so you can tap into Peter&#39;s brain through his magnificent book that he&#39;s writing. and all the cool new updates about his new company and new CTO communities.</span>
+              </p>
+              <p id="t-1613" class="timed-line transcript-line" data-paragraph data-start="1613.42" data-end="1616.3" lang="en-US">
+                <a class="stamp" href="#t-1613" data-start="1613.42">26:53</a>
+                <span>And again, thank you so much and see you soon.</span>
+              </p>
+          </section>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer hang" role="contentinfo">
+    <p class="downloads">Download: <a href="./transcript.txt">Text</a> <a href="./transcript.md">Markdown</a> <a href="./transcript.json">JSON</a></p>
+    <p>Scaling AI in Engineering with Peter Bell | Ep. 7 | Confluent Developer Podcast by Confluent Developer, published November 3, 2025, on YouTube. Transcript from the video&#39;s captions, captured October 7, 2026. This page is a reading aid; the video and its words belong to Confluent Developer.</p>
+    <p><a href="https://github.com/PeterBell/youtube-transcript-share">Made with YouTube Transcript Share</a> <a href="#">Back to top</a></p>
+  </footer>
+</body>
+</html>
